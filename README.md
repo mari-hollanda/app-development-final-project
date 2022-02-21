@@ -1,13 +1,9 @@
 Final Project
 The divisions are 
 
-Guest Services: Badal
-Admin: Badal
+Guest Services
+Admin
 
-Financial Services: Azam
 
-Information Service: 
-
-Human Resources
 
  
