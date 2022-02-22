@@ -22,3 +22,16 @@ C:\bitbucket\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\S
 C:\bitbucket\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\Debug\SleepEasyHotel.pdb
 C:\bitbucket\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\Debug\SleepEasyHotel.csproj.AssemblyReference.cache
 C:\bitbucket\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\Debug\SleepEasyHotel.PresentationLayer.RegistrationServices.resources
+C:\Users\19023\Desktop\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\bin\Debug\SleepEasyHotelDatabase.accdb
+C:\Users\19023\Desktop\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\bin\Debug\SleepEasyHotel.exe.config
+C:\Users\19023\Desktop\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\bin\Debug\SleepEasyHotel.exe
+C:\Users\19023\Desktop\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\bin\Debug\SleepEasyHotel.pdb
+C:\Users\19023\Desktop\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\Debug\SleepEasyHotel.PresentationLayer.HomePage.resources
+C:\Users\19023\Desktop\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\Debug\SleepEasyHotel.Login.resources
+C:\Users\19023\Desktop\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\Debug\SleepEasyHotel.PresentationLayer.RegistrationServices.resources
+C:\Users\19023\Desktop\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\Debug\SleepEasyHotel.Properties.Resources.resources
+C:\Users\19023\Desktop\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\Debug\SleepEasyHotel.csproj.GenerateResource.cache
+C:\Users\19023\Desktop\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\Debug\SleepEasyHotel.csproj.CoreCompileInputs.cache
+C:\Users\19023\Desktop\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\Debug\SleepEasyHotel.exe
+C:\Users\19023\Desktop\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\Debug\SleepEasyHotel.pdb
+C:\Users\19023\Desktop\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\Debug\SleepEasyHotel.csproj.AssemblyReference.cache
