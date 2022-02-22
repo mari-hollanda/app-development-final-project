@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Data.OleDb;
 using System.Windows.Forms;
 using SleepEasyHotel.PresentationLayer;
+using SleepEasyHotel.BusinessObjects;
 
 namespace SleepEasyHotel.PresentationLayer
 {
@@ -189,7 +190,7 @@ namespace SleepEasyHotel.PresentationLayer
         private void RegistrationServices_Load(object sender, EventArgs e)
         {
             PopulateAvailableRoomCombo();
-        
+           
             PopulateBookedRooms();
         }
 
@@ -240,7 +241,7 @@ namespace SleepEasyHotel.PresentationLayer
         }
 
 
-        
+       
 
         private void cmbBookedRoom_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -277,6 +278,11 @@ namespace SleepEasyHotel.PresentationLayer
                     txtBookedEmail.Text = dbReader["email"].ToString();
                     txtBookedPhone.Text = dbReader["Phone"].ToString();
                     txtTestCheckOut.Text = dbReader["CheckOut"].ToString();
+
+                    BookedServicesAddition newService = new BookedServicesAddition(dbReader["CheckIn"].ToString(), dtpBookedCheckOutDate.Text);
+                  
+
+                    rtbBookedTotal.Text = newService.ToString();
                 }
                 //close Reader
                 dbReader.Close();
@@ -287,6 +293,9 @@ namespace SleepEasyHotel.PresentationLayer
             {
                 MessageBox.Show(ex.ToString());
             }
+
+
+
         }
 
         private void btnCheckOut_Click(object sender, EventArgs e)
@@ -343,5 +352,8 @@ namespace SleepEasyHotel.PresentationLayer
             }
             
         }
+
+
+      
     }
 }

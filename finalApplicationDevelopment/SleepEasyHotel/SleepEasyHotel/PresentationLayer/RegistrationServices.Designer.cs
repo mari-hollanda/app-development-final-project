@@ -53,20 +53,24 @@ namespace SleepEasyHotel.PresentationLayer
             this.label1 = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
             this.tbBookedRooms = new System.Windows.Forms.TabPage();
+            this.rtbBookedTotal = new System.Windows.Forms.RichTextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.cmbBookedServices = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtTestCheckOut = new System.Windows.Forms.TextBox();
+            this.txtBookedEmail = new System.Windows.Forms.TextBox();
+            this.txtBookedPhone = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.dtpBookedCheckOutDate = new System.Windows.Forms.DateTimePicker();
+            this.btnCheckOut = new System.Windows.Forms.Button();
+            this.txtBookedName = new System.Windows.Forms.TextBox();
             this.cmbBookedRoom = new System.Windows.Forms.ComboBox();
             this.txtBookedCheckInDate = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtBookedName = new System.Windows.Forms.TextBox();
-            this.btnCheckOut = new System.Windows.Forms.Button();
-            this.dtpBookedCheckOutDate = new System.Windows.Forms.DateTimePicker();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtBookedPhone = new System.Windows.Forms.TextBox();
-            this.txtBookedEmail = new System.Windows.Forms.TextBox();
-            this.txtTestCheckOut = new System.Windows.Forms.TextBox();
             this.tbMenu.SuspendLayout();
             this.tbRegistration.SuspendLayout();
             this.tbBookedRooms.SuspendLayout();
@@ -289,6 +293,10 @@ namespace SleepEasyHotel.PresentationLayer
             // 
             // tbBookedRooms
             // 
+            this.tbBookedRooms.Controls.Add(this.rtbBookedTotal);
+            this.tbBookedRooms.Controls.Add(this.label18);
+            this.tbBookedRooms.Controls.Add(this.cmbBookedServices);
+            this.tbBookedRooms.Controls.Add(this.label17);
             this.tbBookedRooms.Controls.Add(this.txtTestCheckOut);
             this.tbBookedRooms.Controls.Add(this.txtBookedEmail);
             this.tbBookedRooms.Controls.Add(this.txtBookedPhone);
@@ -311,28 +319,137 @@ namespace SleepEasyHotel.PresentationLayer
             this.tbBookedRooms.Text = "Booked Rooms";
             this.tbBookedRooms.UseVisualStyleBackColor = true;
             // 
+            // rtbBookedTotal
+            // 
+            this.rtbBookedTotal.Location = new System.Drawing.Point(111, 351);
+            this.rtbBookedTotal.Name = "rtbBookedTotal";
+            this.rtbBookedTotal.ReadOnly = true;
+            this.rtbBookedTotal.Size = new System.Drawing.Size(277, 137);
+            this.rtbBookedTotal.TabIndex = 19;
+            this.rtbBookedTotal.Text = "";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(42, 363);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(31, 13);
+            this.label18.TabIndex = 18;
+            this.label18.Text = "Total";
+            // 
+            // cmbBookedServices
+            // 
+            this.cmbBookedServices.FormattingEnabled = true;
+            this.cmbBookedServices.Location = new System.Drawing.Point(166, 298);
+            this.cmbBookedServices.Name = "cmbBookedServices";
+            this.cmbBookedServices.Size = new System.Drawing.Size(206, 21);
+            this.cmbBookedServices.TabIndex = 17;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(42, 301);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(48, 13);
+            this.label17.TabIndex = 16;
+            this.label17.Text = "Services";
+            // 
+            // txtTestCheckOut
+            // 
+            this.txtTestCheckOut.Location = new System.Drawing.Point(523, 413);
+            this.txtTestCheckOut.Name = "txtTestCheckOut";
+            this.txtTestCheckOut.Size = new System.Drawing.Size(100, 20);
+            this.txtTestCheckOut.TabIndex = 15;
+            // 
+            // txtBookedEmail
+            // 
+            this.txtBookedEmail.Location = new System.Drawing.Point(166, 206);
+            this.txtBookedEmail.Name = "txtBookedEmail";
+            this.txtBookedEmail.Size = new System.Drawing.Size(206, 20);
+            this.txtBookedEmail.TabIndex = 14;
+            // 
+            // txtBookedPhone
+            // 
+            this.txtBookedPhone.Location = new System.Drawing.Point(166, 248);
+            this.txtBookedPhone.Name = "txtBookedPhone";
+            this.txtBookedPhone.Size = new System.Drawing.Size(206, 20);
+            this.txtBookedPhone.TabIndex = 13;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(42, 248);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(38, 13);
+            this.label16.TabIndex = 12;
+            this.label16.Text = "Phone";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(42, 206);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(32, 13);
+            this.label15.TabIndex = 11;
+            this.label15.Text = "Email";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(457, 168);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(84, 13);
+            this.label14.TabIndex = 10;
+            this.label14.Text = "Check Out Date";
+            // 
+            // dtpBookedCheckOutDate
+            // 
+            this.dtpBookedCheckOutDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpBookedCheckOutDate.Location = new System.Drawing.Point(566, 162);
+            this.dtpBookedCheckOutDate.Name = "dtpBookedCheckOutDate";
+            this.dtpBookedCheckOutDate.Size = new System.Drawing.Size(200, 20);
+            this.dtpBookedCheckOutDate.TabIndex = 9;
+            // 
+            // btnCheckOut
+            // 
+            this.btnCheckOut.Location = new System.Drawing.Point(598, 232);
+            this.btnCheckOut.Name = "btnCheckOut";
+            this.btnCheckOut.Size = new System.Drawing.Size(116, 50);
+            this.btnCheckOut.TabIndex = 8;
+            this.btnCheckOut.Text = "Check Out";
+            this.btnCheckOut.UseVisualStyleBackColor = true;
+            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
+            // 
+            // txtBookedName
+            // 
+            this.txtBookedName.Location = new System.Drawing.Point(166, 117);
+            this.txtBookedName.Name = "txtBookedName";
+            this.txtBookedName.ReadOnly = true;
+            this.txtBookedName.Size = new System.Drawing.Size(206, 20);
+            this.txtBookedName.TabIndex = 7;
+            // 
             // cmbBookedRoom
             // 
             this.cmbBookedRoom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBookedRoom.FormattingEnabled = true;
-            this.cmbBookedRoom.Location = new System.Drawing.Point(136, 91);
+            this.cmbBookedRoom.Location = new System.Drawing.Point(166, 55);
             this.cmbBookedRoom.Name = "cmbBookedRoom";
-            this.cmbBookedRoom.Size = new System.Drawing.Size(121, 21);
+            this.cmbBookedRoom.Size = new System.Drawing.Size(206, 21);
             this.cmbBookedRoom.TabIndex = 6;
             this.cmbBookedRoom.SelectedIndexChanged += new System.EventHandler(this.cmbBookedRoom_SelectedIndexChanged);
             // 
             // txtBookedCheckInDate
             // 
-            this.txtBookedCheckInDate.Location = new System.Drawing.Point(136, 230);
+            this.txtBookedCheckInDate.Location = new System.Drawing.Point(166, 162);
             this.txtBookedCheckInDate.Name = "txtBookedCheckInDate";
             this.txtBookedCheckInDate.ReadOnly = true;
-            this.txtBookedCheckInDate.Size = new System.Drawing.Size(100, 20);
+            this.txtBookedCheckInDate.Size = new System.Drawing.Size(206, 20);
             this.txtBookedCheckInDate.TabIndex = 5;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(51, 230);
+            this.label13.Location = new System.Drawing.Point(42, 165);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(73, 13);
             this.label13.TabIndex = 3;
@@ -341,7 +458,7 @@ namespace SleepEasyHotel.PresentationLayer
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(51, 91);
+            this.label12.Location = new System.Drawing.Point(42, 55);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(75, 13);
             this.label12.TabIndex = 2;
@@ -350,85 +467,11 @@ namespace SleepEasyHotel.PresentationLayer
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(51, 170);
+            this.label10.Location = new System.Drawing.Point(42, 117);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(35, 13);
             this.label10.TabIndex = 1;
             this.label10.Text = "Name";
-            // 
-            // txtBookedName
-            // 
-            this.txtBookedName.Location = new System.Drawing.Point(136, 167);
-            this.txtBookedName.Name = "txtBookedName";
-            this.txtBookedName.ReadOnly = true;
-            this.txtBookedName.Size = new System.Drawing.Size(100, 20);
-            this.txtBookedName.TabIndex = 7;
-            // 
-            // btnCheckOut
-            // 
-            this.btnCheckOut.Location = new System.Drawing.Point(621, 406);
-            this.btnCheckOut.Name = "btnCheckOut";
-            this.btnCheckOut.Size = new System.Drawing.Size(116, 50);
-            this.btnCheckOut.TabIndex = 8;
-            this.btnCheckOut.Text = "Check Out";
-            this.btnCheckOut.UseVisualStyleBackColor = true;
-            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
-            // 
-            // dtpBookedCheckOutDate
-            // 
-            this.dtpBookedCheckOutDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpBookedCheckOutDate.Location = new System.Drawing.Point(537, 363);
-            this.dtpBookedCheckOutDate.Name = "dtpBookedCheckOutDate";
-            this.dtpBookedCheckOutDate.Size = new System.Drawing.Size(200, 20);
-            this.dtpBookedCheckOutDate.TabIndex = 9;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(423, 370);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(84, 13);
-            this.label14.TabIndex = 10;
-            this.label14.Text = "Check Out Date";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(64, 299);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(32, 13);
-            this.label15.TabIndex = 11;
-            this.label15.Text = "Email";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(64, 353);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(38, 13);
-            this.label16.TabIndex = 12;
-            this.label16.Text = "Phone";
-            // 
-            // txtBookedPhone
-            // 
-            this.txtBookedPhone.Location = new System.Drawing.Point(136, 350);
-            this.txtBookedPhone.Name = "txtBookedPhone";
-            this.txtBookedPhone.Size = new System.Drawing.Size(100, 20);
-            this.txtBookedPhone.TabIndex = 13;
-            // 
-            // txtBookedEmail
-            // 
-            this.txtBookedEmail.Location = new System.Drawing.Point(136, 296);
-            this.txtBookedEmail.Name = "txtBookedEmail";
-            this.txtBookedEmail.Size = new System.Drawing.Size(100, 20);
-            this.txtBookedEmail.TabIndex = 14;
-            // 
-            // txtTestCheckOut
-            // 
-            this.txtTestCheckOut.Location = new System.Drawing.Point(473, 117);
-            this.txtTestCheckOut.Name = "txtTestCheckOut";
-            this.txtTestCheckOut.Size = new System.Drawing.Size(100, 20);
-            this.txtTestCheckOut.TabIndex = 15;
             // 
             // RegistrationServices
             // 
@@ -488,5 +531,9 @@ namespace SleepEasyHotel.PresentationLayer
         private System.Windows.Forms.DateTimePicker dtpBookedCheckOutDate;
         private System.Windows.Forms.Button btnCheckOut;
         private System.Windows.Forms.TextBox txtTestCheckOut;
+        private System.Windows.Forms.RichTextBox rtbBookedTotal;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ComboBox cmbBookedServices;
+        private System.Windows.Forms.Label label17;
     }
 }
