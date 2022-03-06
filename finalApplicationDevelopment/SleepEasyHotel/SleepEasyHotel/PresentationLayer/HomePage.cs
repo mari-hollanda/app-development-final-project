@@ -55,5 +55,13 @@ namespace SleepEasyHotel.PresentationLayer
             frmRegistration.Show();
 
         }
+
+        private void btnStaffServices_Click(object sender, EventArgs e)
+        {
+            staffServices staffServices = new staffServices();
+            this.Hide();
+            staffServices.Show();
+
+        }
     }
 }

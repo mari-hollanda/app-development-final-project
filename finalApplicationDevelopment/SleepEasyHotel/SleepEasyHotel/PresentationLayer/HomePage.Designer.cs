@@ -73,6 +73,7 @@ namespace SleepEasyHotel.PresentationLayer
             this.btnStaffServices.TabIndex = 7;
             this.btnStaffServices.Text = "Staff Services";
             this.btnStaffServices.UseVisualStyleBackColor = true;
+            this.btnStaffServices.Click += new System.EventHandler(this.btnStaffServices_Click);
             // 
             // rtbLogin
             // 
