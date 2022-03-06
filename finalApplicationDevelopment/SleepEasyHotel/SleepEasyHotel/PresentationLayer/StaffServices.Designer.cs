@@ -44,8 +44,22 @@
             this.lblPhoneNumber = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.cmbUpdateFname = new System.Windows.Forms.ComboBox();
+            this.txtUpdateLname = new System.Windows.Forms.TextBox();
+            this.txtUpdatePhoneNumber = new System.Windows.Forms.TextBox();
+            this.cmbUpdatePID = new System.Windows.Forms.ComboBox();
+            this.txtUpdateEmail = new System.Windows.Forms.TextBox();
+            this.txtUpdateTitle = new System.Windows.Forms.TextBox();
+            this.btnUpdateStaff = new System.Windows.Forms.Button();
+            this.lblUpdateFname = new System.Windows.Forms.Label();
+            this.lblUpdateLname = new System.Windows.Forms.Label();
+            this.lblUpdatePID = new System.Windows.Forms.Label();
+            this.lblUpdatePhoneNumber = new System.Windows.Forms.Label();
+            this.lblUpdateEmail = new System.Windows.Forms.Label();
+            this.lblUpdateTitle = new System.Windows.Forms.Label();
             this.tbStaff.SuspendLayout();
             this.tbCreateStaff.SuspendLayout();
+            this.tbUpdateStaff.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbStaff
@@ -83,6 +97,19 @@
             // 
             // tbUpdateStaff
             // 
+            this.tbUpdateStaff.Controls.Add(this.lblUpdateTitle);
+            this.tbUpdateStaff.Controls.Add(this.lblUpdateEmail);
+            this.tbUpdateStaff.Controls.Add(this.lblUpdatePhoneNumber);
+            this.tbUpdateStaff.Controls.Add(this.lblUpdatePID);
+            this.tbUpdateStaff.Controls.Add(this.lblUpdateLname);
+            this.tbUpdateStaff.Controls.Add(this.lblUpdateFname);
+            this.tbUpdateStaff.Controls.Add(this.btnUpdateStaff);
+            this.tbUpdateStaff.Controls.Add(this.txtUpdateTitle);
+            this.tbUpdateStaff.Controls.Add(this.txtUpdateEmail);
+            this.tbUpdateStaff.Controls.Add(this.cmbUpdatePID);
+            this.tbUpdateStaff.Controls.Add(this.txtUpdatePhoneNumber);
+            this.tbUpdateStaff.Controls.Add(this.txtUpdateLname);
+            this.tbUpdateStaff.Controls.Add(this.cmbUpdateFname);
             this.tbUpdateStaff.Location = new System.Drawing.Point(4, 22);
             this.tbUpdateStaff.Name = "tbUpdateStaff";
             this.tbUpdateStaff.Padding = new System.Windows.Forms.Padding(3);
@@ -198,6 +225,113 @@
             this.lblTitle.TabIndex = 12;
             this.lblTitle.Text = "Title : ";
             // 
+            // cmbUpdateFname
+            // 
+            this.cmbUpdateFname.FormattingEnabled = true;
+            this.cmbUpdateFname.Location = new System.Drawing.Point(270, 43);
+            this.cmbUpdateFname.Name = "cmbUpdateFname";
+            this.cmbUpdateFname.Size = new System.Drawing.Size(134, 21);
+            this.cmbUpdateFname.TabIndex = 0;
+            // 
+            // txtUpdateLname
+            // 
+            this.txtUpdateLname.Location = new System.Drawing.Point(270, 92);
+            this.txtUpdateLname.Name = "txtUpdateLname";
+            this.txtUpdateLname.Size = new System.Drawing.Size(134, 20);
+            this.txtUpdateLname.TabIndex = 1;
+            // 
+            // txtUpdatePhoneNumber
+            // 
+            this.txtUpdatePhoneNumber.Location = new System.Drawing.Point(270, 190);
+            this.txtUpdatePhoneNumber.Name = "txtUpdatePhoneNumber";
+            this.txtUpdatePhoneNumber.Size = new System.Drawing.Size(134, 20);
+            this.txtUpdatePhoneNumber.TabIndex = 2;
+            // 
+            // cmbUpdatePID
+            // 
+            this.cmbUpdatePID.FormattingEnabled = true;
+            this.cmbUpdatePID.Location = new System.Drawing.Point(270, 142);
+            this.cmbUpdatePID.Name = "cmbUpdatePID";
+            this.cmbUpdatePID.Size = new System.Drawing.Size(134, 21);
+            this.cmbUpdatePID.TabIndex = 3;
+            // 
+            // txtUpdateEmail
+            // 
+            this.txtUpdateEmail.Location = new System.Drawing.Point(270, 245);
+            this.txtUpdateEmail.Name = "txtUpdateEmail";
+            this.txtUpdateEmail.Size = new System.Drawing.Size(134, 20);
+            this.txtUpdateEmail.TabIndex = 4;
+            // 
+            // txtUpdateTitle
+            // 
+            this.txtUpdateTitle.Location = new System.Drawing.Point(270, 293);
+            this.txtUpdateTitle.Name = "txtUpdateTitle";
+            this.txtUpdateTitle.Size = new System.Drawing.Size(134, 20);
+            this.txtUpdateTitle.TabIndex = 5;
+            // 
+            // btnUpdateStaff
+            // 
+            this.btnUpdateStaff.Location = new System.Drawing.Point(224, 341);
+            this.btnUpdateStaff.Name = "btnUpdateStaff";
+            this.btnUpdateStaff.Size = new System.Drawing.Size(98, 29);
+            this.btnUpdateStaff.TabIndex = 6;
+            this.btnUpdateStaff.Text = "Update";
+            this.btnUpdateStaff.UseVisualStyleBackColor = true;
+            // 
+            // lblUpdateFname
+            // 
+            this.lblUpdateFname.AutoSize = true;
+            this.lblUpdateFname.Location = new System.Drawing.Point(83, 43);
+            this.lblUpdateFname.Name = "lblUpdateFname";
+            this.lblUpdateFname.Size = new System.Drawing.Size(66, 13);
+            this.lblUpdateFname.TabIndex = 7;
+            this.lblUpdateFname.Text = "First Name : ";
+            // 
+            // lblUpdateLname
+            // 
+            this.lblUpdateLname.AutoSize = true;
+            this.lblUpdateLname.Location = new System.Drawing.Point(83, 92);
+            this.lblUpdateLname.Name = "lblUpdateLname";
+            this.lblUpdateLname.Size = new System.Drawing.Size(67, 13);
+            this.lblUpdateLname.TabIndex = 8;
+            this.lblUpdateLname.Text = "Last Name : ";
+            // 
+            // lblUpdatePID
+            // 
+            this.lblUpdatePID.AutoSize = true;
+            this.lblUpdatePID.Location = new System.Drawing.Point(83, 142);
+            this.lblUpdatePID.Name = "lblUpdatePID";
+            this.lblUpdatePID.Size = new System.Drawing.Size(67, 13);
+            this.lblUpdatePID.TabIndex = 9;
+            this.lblUpdatePID.Text = "Position ID : ";
+            // 
+            // lblUpdatePhoneNumber
+            // 
+            this.lblUpdatePhoneNumber.AutoSize = true;
+            this.lblUpdatePhoneNumber.Location = new System.Drawing.Point(83, 190);
+            this.lblUpdatePhoneNumber.Name = "lblUpdatePhoneNumber";
+            this.lblUpdatePhoneNumber.Size = new System.Drawing.Size(87, 13);
+            this.lblUpdatePhoneNumber.TabIndex = 10;
+            this.lblUpdatePhoneNumber.Text = "Phone Number : ";
+            // 
+            // lblUpdateEmail
+            // 
+            this.lblUpdateEmail.AutoSize = true;
+            this.lblUpdateEmail.Location = new System.Drawing.Point(83, 245);
+            this.lblUpdateEmail.Name = "lblUpdateEmail";
+            this.lblUpdateEmail.Size = new System.Drawing.Size(41, 13);
+            this.lblUpdateEmail.TabIndex = 11;
+            this.lblUpdateEmail.Text = "Email : ";
+            // 
+            // lblUpdateTitle
+            // 
+            this.lblUpdateTitle.AutoSize = true;
+            this.lblUpdateTitle.Location = new System.Drawing.Point(83, 293);
+            this.lblUpdateTitle.Name = "lblUpdateTitle";
+            this.lblUpdateTitle.Size = new System.Drawing.Size(36, 13);
+            this.lblUpdateTitle.TabIndex = 12;
+            this.lblUpdateTitle.Text = "Title : ";
+            // 
             // staffServices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,6 +343,8 @@
             this.tbStaff.ResumeLayout(false);
             this.tbCreateStaff.ResumeLayout(false);
             this.tbCreateStaff.PerformLayout();
+            this.tbUpdateStaff.ResumeLayout(false);
+            this.tbUpdateStaff.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -231,5 +367,18 @@
         private System.Windows.Forms.Label lblPhoneNumber;
         private System.Windows.Forms.Label lblPID;
         private System.Windows.Forms.Label lblLastName;
+        private System.Windows.Forms.Label lblUpdateTitle;
+        private System.Windows.Forms.Label lblUpdateEmail;
+        private System.Windows.Forms.Label lblUpdatePhoneNumber;
+        private System.Windows.Forms.Label lblUpdatePID;
+        private System.Windows.Forms.Label lblUpdateLname;
+        private System.Windows.Forms.Label lblUpdateFname;
+        private System.Windows.Forms.Button btnUpdateStaff;
+        private System.Windows.Forms.TextBox txtUpdateTitle;
+        private System.Windows.Forms.TextBox txtUpdateEmail;
+        private System.Windows.Forms.ComboBox cmbUpdatePID;
+        private System.Windows.Forms.TextBox txtUpdatePhoneNumber;
+        private System.Windows.Forms.TextBox txtUpdateLname;
+        private System.Windows.Forms.ComboBox cmbUpdateFname;
     }
 }
