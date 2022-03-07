@@ -61,6 +61,7 @@
             this.txtUpdatePhoneNumber = new System.Windows.Forms.TextBox();
             this.txtUpdateLname = new System.Windows.Forms.TextBox();
             this.cmbUpdateFname = new System.Windows.Forms.ComboBox();
+            this.btnDeleteStaff = new System.Windows.Forms.Button();
             this.tbStaff.SuspendLayout();
             this.tbCreateStaff.SuspendLayout();
             this.tbUpdateStaff.SuspendLayout();
@@ -209,6 +210,7 @@
             // 
             // tbUpdateStaff
             // 
+            this.tbUpdateStaff.Controls.Add(this.btnDeleteStaff);
             this.tbUpdateStaff.Controls.Add(this.lblStaffIDtoUpdate);
             this.tbUpdateStaff.Controls.Add(this.lblStaffIDUpdateSelect);
             this.tbUpdateStaff.Controls.Add(this.lblSelectionUpdate);
@@ -376,6 +378,16 @@
             this.cmbUpdateFname.TabIndex = 0;
             this.cmbUpdateFname.SelectedIndexChanged += new System.EventHandler(this.cmbUpdateFname_SelectedIndexChanged);
             // 
+            // btnDeleteStaff
+            // 
+            this.btnDeleteStaff.Location = new System.Drawing.Point(522, 208);
+            this.btnDeleteStaff.Name = "btnDeleteStaff";
+            this.btnDeleteStaff.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteStaff.TabIndex = 17;
+            this.btnDeleteStaff.Text = "Delete Staff";
+            this.btnDeleteStaff.UseVisualStyleBackColor = true;
+            this.btnDeleteStaff.Click += new System.EventHandler(this.btnDeleteStaff_Click);
+            // 
             // staffServices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -428,5 +440,6 @@
         private System.Windows.Forms.TextBox txtUpdateFirstName;
         private System.Windows.Forms.Label lblStaffIDtoUpdate;
         private System.Windows.Forms.Label lblStaffIDUpdateSelect;
+        private System.Windows.Forms.Button btnDeleteStaff;
     }
 }

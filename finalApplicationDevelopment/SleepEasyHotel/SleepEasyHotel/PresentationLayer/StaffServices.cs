@@ -251,5 +251,62 @@ namespace SleepEasyHotel.PresentationLayer
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void btnDeleteStaff_Click(object sender, EventArgs e)
+        {
+            if(lblStaffIDtoUpdate.Text == "")
+            {
+                MessageBox.Show("Please Select Staff to Delete");
+            }
+            else
+            {
+                try
+                {
+                    dbConn = new OleDbConnection(sConnection);
+                    //open connection to database
+                    dbConn.Open();
+                    //create query to Update Staff table
+                    string sql;
+
+
+                    sql = "DELETE FROM Staff WHERE StaffID=" + lblStaffIDtoUpdate.Text + ";";
+
+
+
+
+
+
+
+                    OleDbCommand dbCmd = new OleDbCommand();
+
+
+                    //set command SQL string
+                    dbCmd.CommandText = sql;
+
+                    //set the command connection
+                    dbCmd.Connection = dbConn;
+
+
+
+                    //create OleDbDataReader dbReader
+                    OleDbDataReader dbReader;
+
+                    //Read data into dbReader
+                    dbReader = dbCmd.ExecuteReader();
+
+                    //close database connection
+                    dbConn.Close();
+
+
+                    PopulateStaffCombo();
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+
+            }
+        }
     }
 }
