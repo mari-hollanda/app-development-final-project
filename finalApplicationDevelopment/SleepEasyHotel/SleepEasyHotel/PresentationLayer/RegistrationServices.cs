@@ -72,6 +72,7 @@ namespace SleepEasyHotel.PresentationLayer
         private void ClearForm()
         {
           //  cmbRoomAvailable.Items.Clear();
+         
             txtFirstName.Clear();
             txtLastName.Clear();
             txtCity.Clear();

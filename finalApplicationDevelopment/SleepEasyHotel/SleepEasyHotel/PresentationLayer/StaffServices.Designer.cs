@@ -57,6 +57,10 @@
             this.lblUpdatePhoneNumber = new System.Windows.Forms.Label();
             this.lblUpdateEmail = new System.Windows.Forms.Label();
             this.lblUpdateTitle = new System.Windows.Forms.Label();
+            this.txtUpdateFirstName = new System.Windows.Forms.TextBox();
+            this.lblSelectionUpdate = new System.Windows.Forms.Label();
+            this.lblStaffIDUpdateSelect = new System.Windows.Forms.Label();
+            this.lblStaffIDtoUpdate = new System.Windows.Forms.Label();
             this.tbStaff.SuspendLayout();
             this.tbCreateStaff.SuspendLayout();
             this.tbUpdateStaff.SuspendLayout();
@@ -97,6 +101,10 @@
             // 
             // tbUpdateStaff
             // 
+            this.tbUpdateStaff.Controls.Add(this.lblStaffIDtoUpdate);
+            this.tbUpdateStaff.Controls.Add(this.lblStaffIDUpdateSelect);
+            this.tbUpdateStaff.Controls.Add(this.lblSelectionUpdate);
+            this.tbUpdateStaff.Controls.Add(this.txtUpdateFirstName);
             this.tbUpdateStaff.Controls.Add(this.lblUpdateTitle);
             this.tbUpdateStaff.Controls.Add(this.lblUpdateEmail);
             this.tbUpdateStaff.Controls.Add(this.lblUpdatePhoneNumber);
@@ -232,17 +240,18 @@
             this.cmbUpdateFname.Name = "cmbUpdateFname";
             this.cmbUpdateFname.Size = new System.Drawing.Size(134, 21);
             this.cmbUpdateFname.TabIndex = 0;
+            this.cmbUpdateFname.SelectedIndexChanged += new System.EventHandler(this.cmbUpdateFname_SelectedIndexChanged);
             // 
             // txtUpdateLname
             // 
-            this.txtUpdateLname.Location = new System.Drawing.Point(270, 92);
+            this.txtUpdateLname.Location = new System.Drawing.Point(270, 126);
             this.txtUpdateLname.Name = "txtUpdateLname";
             this.txtUpdateLname.Size = new System.Drawing.Size(134, 20);
             this.txtUpdateLname.TabIndex = 1;
             // 
             // txtUpdatePhoneNumber
             // 
-            this.txtUpdatePhoneNumber.Location = new System.Drawing.Point(270, 190);
+            this.txtUpdatePhoneNumber.Location = new System.Drawing.Point(270, 208);
             this.txtUpdatePhoneNumber.Name = "txtUpdatePhoneNumber";
             this.txtUpdatePhoneNumber.Size = new System.Drawing.Size(134, 20);
             this.txtUpdatePhoneNumber.TabIndex = 2;
@@ -250,7 +259,7 @@
             // cmbUpdatePID
             // 
             this.cmbUpdatePID.FormattingEnabled = true;
-            this.cmbUpdatePID.Location = new System.Drawing.Point(270, 142);
+            this.cmbUpdatePID.Location = new System.Drawing.Point(270, 163);
             this.cmbUpdatePID.Name = "cmbUpdatePID";
             this.cmbUpdatePID.Size = new System.Drawing.Size(134, 21);
             this.cmbUpdatePID.TabIndex = 3;
@@ -277,11 +286,12 @@
             this.btnUpdateStaff.TabIndex = 6;
             this.btnUpdateStaff.Text = "Update";
             this.btnUpdateStaff.UseVisualStyleBackColor = true;
+            this.btnUpdateStaff.Click += new System.EventHandler(this.btnUpdateStaff_Click);
             // 
             // lblUpdateFname
             // 
             this.lblUpdateFname.AutoSize = true;
-            this.lblUpdateFname.Location = new System.Drawing.Point(83, 43);
+            this.lblUpdateFname.Location = new System.Drawing.Point(83, 88);
             this.lblUpdateFname.Name = "lblUpdateFname";
             this.lblUpdateFname.Size = new System.Drawing.Size(66, 13);
             this.lblUpdateFname.TabIndex = 7;
@@ -290,7 +300,7 @@
             // lblUpdateLname
             // 
             this.lblUpdateLname.AutoSize = true;
-            this.lblUpdateLname.Location = new System.Drawing.Point(83, 92);
+            this.lblUpdateLname.Location = new System.Drawing.Point(83, 126);
             this.lblUpdateLname.Name = "lblUpdateLname";
             this.lblUpdateLname.Size = new System.Drawing.Size(67, 13);
             this.lblUpdateLname.TabIndex = 8;
@@ -299,7 +309,7 @@
             // lblUpdatePID
             // 
             this.lblUpdatePID.AutoSize = true;
-            this.lblUpdatePID.Location = new System.Drawing.Point(83, 142);
+            this.lblUpdatePID.Location = new System.Drawing.Point(83, 166);
             this.lblUpdatePID.Name = "lblUpdatePID";
             this.lblUpdatePID.Size = new System.Drawing.Size(67, 13);
             this.lblUpdatePID.TabIndex = 9;
@@ -308,7 +318,7 @@
             // lblUpdatePhoneNumber
             // 
             this.lblUpdatePhoneNumber.AutoSize = true;
-            this.lblUpdatePhoneNumber.Location = new System.Drawing.Point(83, 190);
+            this.lblUpdatePhoneNumber.Location = new System.Drawing.Point(87, 208);
             this.lblUpdatePhoneNumber.Name = "lblUpdatePhoneNumber";
             this.lblUpdatePhoneNumber.Size = new System.Drawing.Size(87, 13);
             this.lblUpdatePhoneNumber.TabIndex = 10;
@@ -317,7 +327,7 @@
             // lblUpdateEmail
             // 
             this.lblUpdateEmail.AutoSize = true;
-            this.lblUpdateEmail.Location = new System.Drawing.Point(83, 245);
+            this.lblUpdateEmail.Location = new System.Drawing.Point(87, 245);
             this.lblUpdateEmail.Name = "lblUpdateEmail";
             this.lblUpdateEmail.Size = new System.Drawing.Size(41, 13);
             this.lblUpdateEmail.TabIndex = 11;
@@ -326,11 +336,44 @@
             // lblUpdateTitle
             // 
             this.lblUpdateTitle.AutoSize = true;
-            this.lblUpdateTitle.Location = new System.Drawing.Point(83, 293);
+            this.lblUpdateTitle.Location = new System.Drawing.Point(87, 293);
             this.lblUpdateTitle.Name = "lblUpdateTitle";
             this.lblUpdateTitle.Size = new System.Drawing.Size(36, 13);
             this.lblUpdateTitle.TabIndex = 12;
             this.lblUpdateTitle.Text = "Title : ";
+            // 
+            // txtUpdateFirstName
+            // 
+            this.txtUpdateFirstName.Location = new System.Drawing.Point(270, 88);
+            this.txtUpdateFirstName.Name = "txtUpdateFirstName";
+            this.txtUpdateFirstName.Size = new System.Drawing.Size(134, 20);
+            this.txtUpdateFirstName.TabIndex = 13;
+            // 
+            // lblSelectionUpdate
+            // 
+            this.lblSelectionUpdate.AutoSize = true;
+            this.lblSelectionUpdate.Location = new System.Drawing.Point(83, 46);
+            this.lblSelectionUpdate.Name = "lblSelectionUpdate";
+            this.lblSelectionUpdate.Size = new System.Drawing.Size(46, 13);
+            this.lblSelectionUpdate.TabIndex = 14;
+            this.lblSelectionUpdate.Text = "Select : ";
+            // 
+            // lblStaffIDUpdateSelect
+            // 
+            this.lblStaffIDUpdateSelect.AutoSize = true;
+            this.lblStaffIDUpdateSelect.Location = new System.Drawing.Point(430, 46);
+            this.lblStaffIDUpdateSelect.Name = "lblStaffIDUpdateSelect";
+            this.lblStaffIDUpdateSelect.Size = new System.Drawing.Size(52, 13);
+            this.lblStaffIDUpdateSelect.TabIndex = 15;
+            this.lblStaffIDUpdateSelect.Text = "Staff ID : ";
+            // 
+            // lblStaffIDtoUpdate
+            // 
+            this.lblStaffIDtoUpdate.AutoSize = true;
+            this.lblStaffIDtoUpdate.Location = new System.Drawing.Point(488, 46);
+            this.lblStaffIDtoUpdate.Name = "lblStaffIDtoUpdate";
+            this.lblStaffIDtoUpdate.Size = new System.Drawing.Size(0, 13);
+            this.lblStaffIDtoUpdate.TabIndex = 16;
             // 
             // staffServices
             // 
@@ -380,5 +423,9 @@
         private System.Windows.Forms.TextBox txtUpdatePhoneNumber;
         private System.Windows.Forms.TextBox txtUpdateLname;
         private System.Windows.Forms.ComboBox cmbUpdateFname;
+        private System.Windows.Forms.Label lblSelectionUpdate;
+        private System.Windows.Forms.TextBox txtUpdateFirstName;
+        private System.Windows.Forms.Label lblStaffIDtoUpdate;
+        private System.Windows.Forms.Label lblStaffIDUpdateSelect;
     }
 }
