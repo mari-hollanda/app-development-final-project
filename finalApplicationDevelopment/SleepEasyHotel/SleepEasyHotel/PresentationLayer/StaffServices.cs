@@ -17,6 +17,7 @@ namespace SleepEasyHotel.PresentationLayer
         {
             InitializeComponent();
             PopulateStaffCombo();
+
         }
 
         string sConnection = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=SleepEasyHotelDatabase.accdb";
@@ -28,7 +29,10 @@ namespace SleepEasyHotel.PresentationLayer
         {
             //clear the form everytime when this method is called then populate
             ClearForm();
-            
+            cmbPID.Items.Add("1");
+            cmbPID.Items.Add("2");
+
+
 
             try
             {
@@ -99,7 +103,7 @@ namespace SleepEasyHotel.PresentationLayer
                 dbConn = new OleDbConnection(sConnection);
                 //open connection to database
                 dbConn.Open();
-                //create query to select all rows from Guest table
+                //create query to select all rows from Staff table
                 string sql;
 
                 sql = "SELECT StaffID,FirstName,LastName,PositionID,PhoneNumber,Email,Title FROM Staff Where FirstName='" + cmbUpdateFname.Text + "';";
@@ -144,7 +148,7 @@ namespace SleepEasyHotel.PresentationLayer
                 dbConn = new OleDbConnection(sConnection);
                 //open connection to database
                 dbConn.Open();
-                //create query to select all rows from Guest table
+                //create query to Update Staff table
                 string sql;
 
 
@@ -185,6 +189,62 @@ namespace SleepEasyHotel.PresentationLayer
 
                 PopulateStaffCombo();
                 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            
+
+
+            try
+            {
+                dbConn = new OleDbConnection(sConnection);
+                //open connection to database
+                dbConn.Open();
+                //create query to select all rows from Guest table
+                string sql;
+
+
+
+                sql = "Insert into Staff(FirstName, LastName,PositionId, PhoneNumber, Email, Title) Values (@FirstName, @LastName, @PositionId, @PhoneNumber, @Email, @Title);";
+                //create database command
+                OleDbCommand dbCmd = new OleDbCommand();
+
+                //set command SQL string
+                dbCmd.CommandText = sql;
+                //set the command connection
+                dbCmd.Connection = dbConn;
+
+                //bind parameters
+                dbCmd.Parameters.AddWithValue("@FirstName", txtFname.Text);
+                dbCmd.Parameters.AddWithValue("@LastName", txtLname.Text);
+                dbCmd.Parameters.AddWithValue("@PositionId", cmbPID.Text );
+                dbCmd.Parameters.AddWithValue("@PhoneNumber", txtPhoneNumber.Text );
+                dbCmd.Parameters.AddWithValue("@Email", txtEmail.Text );
+                dbCmd.Parameters.AddWithValue("@Title", txtTtile.Text);
+                
+
+                //execute insert. Check to see how many rows were affected
+                int rowCount = dbCmd.ExecuteNonQuery();
+
+                //close database connection
+                dbConn.Close();
+                if (rowCount == 1)
+                {
+                    MessageBox.Show("Record inserted successfully");
+
+                    PopulateStaffCombo();
+
+                }
+                else
+                {
+                    MessageBox.Show("Error inserting record. Please try again.");
+                }
             }
             catch (Exception ex)
             {
