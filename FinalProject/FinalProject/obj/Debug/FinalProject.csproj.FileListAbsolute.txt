@@ -16,3 +16,21 @@ C:\Users\maria\source\repos\FinalProject\FinalProject\obj\Debug\FinalProject.Pre
 C:\Users\maria\source\repos\FinalProject\FinalProject\obj\Debug\FinalProject.PresentationLayer.frmRooms.resources
 C:\Users\maria\source\repos\FinalProject\FinalProject\obj\Debug\FinalProject.PresentationLayer.frmServices.resources
 C:\Users\maria\source\repos\FinalProject\FinalProject\obj\Debug\FinalProject.PresentationLayer.frmStaffRegistration.resources
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\FinalProject\FinalProject\bin\Debug\FinalProject.exe.config
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\FinalProject\FinalProject\bin\Debug\FinalProject.exe
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\FinalProject\FinalProject\bin\Debug\FinalProject.pdb
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\FinalProject\FinalProject\obj\Debug\FinalProject.csproj.AssemblyReference.cache
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\FinalProject\FinalProject\obj\Debug\FinalProject.frmBookedRooms.resources
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\FinalProject\FinalProject\obj\Debug\FinalProject.frmGuestRegistration.resources
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\FinalProject\FinalProject\obj\Debug\FinalProject.PresentationLayer.frmInventory.resources
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\FinalProject\FinalProject\obj\Debug\FinalProject.frmLogin.resources
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\FinalProject\FinalProject\obj\Debug\FinalProject.frmMessage.resources
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\FinalProject\FinalProject\obj\Debug\FinalProject.PresentationLayer.frmRooms.resources
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\FinalProject\FinalProject\obj\Debug\FinalProject.PresentationLayer.frmServices.resources
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\FinalProject\FinalProject\obj\Debug\FinalProject.PresentationLayer.frmStaffRegistration.resources
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\FinalProject\FinalProject\obj\Debug\FinalProject.mainFrm.resources
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\FinalProject\FinalProject\obj\Debug\FinalProject.Properties.Resources.resources
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\FinalProject\FinalProject\obj\Debug\FinalProject.csproj.GenerateResource.cache
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\FinalProject\FinalProject\obj\Debug\FinalProject.csproj.CoreCompileInputs.cache
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\FinalProject\FinalProject\obj\Debug\FinalProject.exe
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\FinalProject\FinalProject\obj\Debug\FinalProject.pdb

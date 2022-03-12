@@ -46,7 +46,7 @@ namespace FinalProject
 
         private void deleteTlsButton_Click(object sender, EventArgs e)
         {
-
+          cleartab()
         }
 
         private void clearTlsButton_Click(object sender, EventArgs e)

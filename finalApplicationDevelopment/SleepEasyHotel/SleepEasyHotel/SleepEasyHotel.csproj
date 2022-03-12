@@ -54,7 +54,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -69,11 +69,35 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessObjects\BookedServicesAddition.cs" />
-    <Compile Include="PresentationLayer\HomePage.cs">
-      <SubType>Form</SubType>
+    <Compile Include="PresentationLayer\frmBookedRooms.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PresentationLayer\HomePage.Designer.cs">
-      <DependentUpon>HomePage.cs</DependentUpon>
+    <Compile Include="PresentationLayer\frmBookedRooms.Designer.cs">
+      <DependentUpon>frmBookedRooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmGuestRegistration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmGuestRegistration.Designer.cs">
+      <DependentUpon>frmGuestRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmUpdateRooms.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmUpdateRooms.Designer.cs">
+      <DependentUpon>frmUpdateRooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmStaffRegistration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmStaffRegistration.Designer.cs">
+      <DependentUpon>frmStaffRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\frmStaffUpdate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmStaffUpdate.Designer.cs">
+      <DependentUpon>frmStaffUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="PresentationLayer\Login.cs">
       <SubType>Form</SubType>
@@ -81,31 +105,43 @@
     <Compile Include="PresentationLayer\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\mainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\mainFrm.Designer.cs">
+      <DependentUpon>mainFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\RegistrationServices.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PresentationLayer\RegistrationServices.Designer.cs">
       <DependentUpon>RegistrationServices.cs</DependentUpon>
     </Compile>
-    <Compile Include="PresentationLayer\StaffServices.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\StaffServices.Designer.cs">
-      <DependentUpon>StaffServices.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="PresentationLayer\HomePage.resx">
-      <DependentUpon>HomePage.cs</DependentUpon>
+    <EmbeddedResource Include="PresentationLayer\frmBookedRooms.resx">
+      <DependentUpon>frmBookedRooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmGuestRegistration.resx">
+      <DependentUpon>frmGuestRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmUpdateRooms.resx">
+      <DependentUpon>frmUpdateRooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmStaffRegistration.resx">
+      <DependentUpon>frmStaffRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\frmStaffUpdate.resx">
+      <DependentUpon>frmStaffUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\mainFrm.resx">
+      <DependentUpon>mainFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PresentationLayer\RegistrationServices.resx">
       <DependentUpon>RegistrationServices.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PresentationLayer\StaffServices.resx">
-      <DependentUpon>StaffServices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

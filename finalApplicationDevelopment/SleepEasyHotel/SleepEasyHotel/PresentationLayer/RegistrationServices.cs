@@ -280,10 +280,10 @@ namespace SleepEasyHotel.PresentationLayer
                     txtBookedPhone.Text = dbReader["Phone"].ToString();
                     txtTestCheckOut.Text = dbReader["CheckOut"].ToString();
 
-                    BookedServicesAddition newService = new BookedServicesAddition(dbReader["CheckIn"].ToString(), dtpBookedCheckOutDate.Text);
+                   // BookedServicesAddition newService = new BookedServicesAddition(dbReader["CheckIn"].ToString(), dtpBookedCheckOutDate.Text);
                   
 
-                    rtbBookedTotal.Text = newService.ToString();
+                  //  rtbBookedTotal.Text = newService.ToString();
                 }
                 //close Reader
                 dbReader.Close();

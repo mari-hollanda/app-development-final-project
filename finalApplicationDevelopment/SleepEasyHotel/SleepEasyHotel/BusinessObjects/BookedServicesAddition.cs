@@ -13,14 +13,16 @@ namespace SleepEasyHotel.BusinessObjects
         private double total;
        
        
-        public BookedServicesAddition(string checkin, string checkout) 
+        public BookedServicesAddition() 
+        {
+            
+        }
+
+        public double CalculateTotal(string checkin, string checkout)
         {
             CheckIn = checkin;
             CheckOut = checkout;
-        }
 
-        public double CalculateTotal()
-        {
             DateTime st = DateTime.Parse(CheckIn);
             DateTime end = DateTime.Parse(CheckOut);
             TimeSpan difference = end - st;
@@ -30,11 +32,6 @@ namespace SleepEasyHotel.BusinessObjects
 
        
 
-        public override string ToString()
-        {
-
-            return "Total Cost Till Date: " + CheckOut + " is: " + CalculateTotal() + "\n";
-                
-        }
+        
     }
 }

@@ -52,6 +52,12 @@
     <Compile Include="PresentationLayer\frmBookedRooms.Designer.cs">
       <DependentUpon>frmBookedRooms.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresentationLayer\frmGuestRegistration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\frmGuestRegistration.Designer.cs">
+      <DependentUpon>frmGuestRegistration.cs</DependentUpon>
+    </Compile>
     <Compile Include="PresentationLayer\frmInventory.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -96,12 +102,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PresentationLayer\frmGuestRegistration.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="PresentationLayer\frmGuestRegistration.Designer.cs">
-      <DependentUpon>frmGuestRegistration.cs</DependentUpon>
-    </Compile>
     <Compile Include="Util.cs" />
     <EmbeddedResource Include="PresentationLayer\frmBookedRooms.resx">
       <DependentUpon>frmBookedRooms.cs</DependentUpon>

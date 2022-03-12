@@ -81,24 +81,11 @@ namespace SleepEasyHotel
                 //Read first record
                 dbReader.Read();
                 if (dbReader.HasRows)
-                {
-
-                   
-                    if (dbReader["PositionID"].ToString().Equals("1"))
-                    {
-                        HomePage frmHomePage = new HomePage();
-                        frmHomePage.setInfo(dbReader["UserName"].ToString(), dbReader["PositionID"].ToString());
-                        this.Hide();
-                        frmHomePage.Show();
-                    }
-                    else if (dbReader["PositionID"].ToString().Equals("2"))
-                    {
-                        RegistrationServices frmRegistration = new RegistrationServices();
-                        this.Hide();
-                        frmRegistration.Show();
-                    }
-
-
+                {    mainFrm frm = new mainFrm();
+                        frm.setInfo(dbReader["UserName"].ToString(), dbReader["PositionID"].ToString());
+                       this.Hide();
+                        frm.Show();
+                        
 
                 }
                 else {
@@ -112,6 +99,11 @@ namespace SleepEasyHotel
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -11,28 +11,22 @@ using System.Windows.Forms;
 
 namespace SleepEasyHotel.PresentationLayer
 {
-    public partial class staffServices : Form
+    public partial class frmStaffUpdate : UserControl
     {
-        public staffServices()
+        public frmStaffUpdate()
         {
             InitializeComponent();
             PopulateStaffCombo();
-
         }
+      
 
         string sConnection = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=SleepEasyHotelDatabase.accdb";
         OleDbConnection dbConn;
 
-       
-
         public void PopulateStaffCombo()
         {
             //clear the form everytime when this method is called then populate
-            ClearForm();
-            cmbPID.Items.Add("1");
-            cmbPID.Items.Add("2");
-
-
+           ClearForm();
 
             try
             {
@@ -55,10 +49,10 @@ namespace SleepEasyHotel.PresentationLayer
                 //Read first record
                 while (dbReader.Read())
                 {
-                    
+
 
                     cmbUpdateFname.Items.Add(dbReader["FirstName"].ToString());
-                   
+
 
                 }
                 //close Reader
@@ -75,29 +69,23 @@ namespace SleepEasyHotel.PresentationLayer
 
         private void ClearForm()
         {
-           
+
             cmbUpdateFname.Items.Clear();
-           
-            txtUpdateFirstName.Clear();
-            cmbUpdatePID.Items.Clear();
-            txtUpdateLname.Clear();
-            cmbUpdatePID.Items.Clear();
-           
-            txtUpdatePhoneNumber.Clear();
-            txtUpdateEmail.Clear();
-            txtUpdateTitle.Clear();
+
+            txtFirstName.Clear();
+            txtLastName.Clear();
+
+            cmbPID.SelectedIndex = -1;
+            txtPhone.Clear();
+            txtEmail.Clear();
+            txtTitle.Clear();
+            
 
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void cmbUpdateFname_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cmbUpdatePID.Items.Add("1");
-            cmbUpdatePID.Items.Add("2");
+            
             try
             {
                 dbConn = new OleDbConnection(sConnection);
@@ -120,13 +108,20 @@ namespace SleepEasyHotel.PresentationLayer
                 //Read first record
                 while (dbReader.Read())
                 {
-                    
-                    txtUpdateFirstName.Text = dbReader["FirstName"].ToString();
-                    txtUpdateLname.Text = dbReader["LastName"].ToString();
-                    cmbUpdatePID.Text = dbReader["PositionId"].ToString();
-                    txtUpdatePhoneNumber.Text = dbReader["PhoneNumber"].ToString();
-                    txtUpdateEmail.Text = dbReader["Email"].ToString();
-                    txtUpdateTitle.Text = dbReader["Title"].ToString();
+
+                    txtFirstName.Text = dbReader["FirstName"].ToString();
+                    txtLastName.Text = dbReader["LastName"].ToString();
+                    if (dbReader["PositionId"].ToString() == "1")
+                    {
+                        cmbPID.SelectedIndex = 0;
+                    }
+                    else {
+                        cmbPID.SelectedIndex = 1;
+                    }
+                    //cmbPID.Text = dbReader["PositionId"].ToString();
+                    txtPhone.Text = dbReader["PhoneNumber"].ToString();
+                    txtEmail.Text = dbReader["Email"].ToString();
+                    txtTitle.Text = dbReader["Title"].ToString();
                     lblStaffIDtoUpdate.Text = dbReader["StaffID"].ToString();
 
                 }
@@ -143,123 +138,10 @@ namespace SleepEasyHotel.PresentationLayer
 
         private void btnUpdateStaff_Click(object sender, EventArgs e)
         {
-            try
+            if (ValidateForm())
             {
-                dbConn = new OleDbConnection(sConnection);
-                //open connection to database
-                dbConn.Open();
-                //create query to Update Staff table
-                string sql;
 
 
-                sql = "UPDATE Staff SET FirstName='" + txtUpdateFirstName.Text +
-                 "',LastName='" + txtUpdateLname.Text +
-                  "',PositionID=" + cmbUpdatePID.Text +
-                  ",PhoneNumber=" + txtUpdatePhoneNumber.Text +
-                  ",Email='" + txtUpdateEmail.Text +
-                    "',Title='" + txtUpdateTitle.Text + 
-                    "'WHERE StaffID =" + lblStaffIDtoUpdate.Text + ";";
-
-
-
-                
-
-
-
-                OleDbCommand dbCmd = new OleDbCommand();
-
-
-                //set command SQL string
-                dbCmd.CommandText = sql;
-
-                //set the command connection
-                dbCmd.Connection = dbConn;
-
-
-
-                //create OleDbDataReader dbReader
-                OleDbDataReader dbReader;
-
-                //Read data into dbReader
-                dbReader = dbCmd.ExecuteReader();
-
-                //close database connection
-                dbConn.Close();
-
-
-                PopulateStaffCombo();
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
-
-        private void btnRegister_Click(object sender, EventArgs e)
-        {
-            
-
-
-            try
-            {
-                dbConn = new OleDbConnection(sConnection);
-                //open connection to database
-                dbConn.Open();
-                //create query to select all rows from Guest table
-                string sql;
-
-
-
-                sql = "Insert into Staff(FirstName, LastName,PositionId, PhoneNumber, Email, Title) Values (@FirstName, @LastName, @PositionId, @PhoneNumber, @Email, @Title);";
-                //create database command
-                OleDbCommand dbCmd = new OleDbCommand();
-
-                //set command SQL string
-                dbCmd.CommandText = sql;
-                //set the command connection
-                dbCmd.Connection = dbConn;
-
-                //bind parameters
-                dbCmd.Parameters.AddWithValue("@FirstName", txtFname.Text);
-                dbCmd.Parameters.AddWithValue("@LastName", txtLname.Text);
-                dbCmd.Parameters.AddWithValue("@PositionId", cmbPID.Text );
-                dbCmd.Parameters.AddWithValue("@PhoneNumber", txtPhoneNumber.Text );
-                dbCmd.Parameters.AddWithValue("@Email", txtEmail.Text );
-                dbCmd.Parameters.AddWithValue("@Title", txtTtile.Text);
-                
-
-                //execute insert. Check to see how many rows were affected
-                int rowCount = dbCmd.ExecuteNonQuery();
-
-                //close database connection
-                dbConn.Close();
-                if (rowCount == 1)
-                {
-                    MessageBox.Show("Record inserted successfully");
-
-                    PopulateStaffCombo();
-
-                }
-                else
-                {
-                    MessageBox.Show("Error inserting record. Please try again.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
-
-        private void btnDeleteStaff_Click(object sender, EventArgs e)
-        {
-            if(lblStaffIDtoUpdate.Text == "")
-            {
-                MessageBox.Show("Please Select Staff to Delete");
-            }
-            else
-            {
                 try
                 {
                     dbConn = new OleDbConnection(sConnection);
@@ -269,12 +151,13 @@ namespace SleepEasyHotel.PresentationLayer
                     string sql;
 
 
-                    sql = "DELETE FROM Staff WHERE StaffID=" + lblStaffIDtoUpdate.Text + ";";
-
-
-
-
-
+                    sql = "UPDATE Staff SET FirstName='" + txtFirstName.Text +
+                     "',LastName='" + txtLastName.Text +
+                      "',PositionID=" + cmbPID.Text +
+                      ",PhoneNumber=" + txtPhone.Text +
+                      ",Email='" + txtEmail.Text +
+                        "',Title='" + txtTitle.Text +
+                        "'WHERE StaffID =" + lblStaffIDtoUpdate.Text + ";";
 
 
                     OleDbCommand dbCmd = new OleDbCommand();
@@ -297,8 +180,63 @@ namespace SleepEasyHotel.PresentationLayer
                     //close database connection
                     dbConn.Close();
 
-
+                    // ClearForm();
+                    cmbUpdateFname.Items.Clear();
                     PopulateStaffCombo();
+                    MessageBox.Show("Record Updated");
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+        }
+
+        private void btnDeleteStaff_Click(object sender, EventArgs e)
+        {
+            if (lblStaffIDtoUpdate.Text == "")
+            {
+                MessageBox.Show("Please Select Staff to Delete");
+            }
+            else
+            {
+                try
+                {
+                    dbConn = new OleDbConnection(sConnection);
+                    //open connection to database
+                    dbConn.Open();
+                    //create query to Update Staff table
+                    string sql;
+
+
+                    sql = "DELETE FROM Staff WHERE StaffID=" + lblStaffIDtoUpdate.Text + ";";
+
+                    OleDbCommand dbCmd = new OleDbCommand();
+
+
+                    //set command SQL string
+                    dbCmd.CommandText = sql;
+
+                    //set the command connection
+                    dbCmd.Connection = dbConn;
+
+
+
+                    //create OleDbDataReader dbReader
+                    OleDbDataReader dbReader;
+
+                    //Read data into dbReader
+                    dbReader = dbCmd.ExecuteReader();
+
+                    //close database connection
+                    dbConn.Close();
+
+                    //ClearForm();
+                   
+                    cmbUpdateFname.Items.Clear();
+                    PopulateStaffCombo();
+                    MessageBox.Show("Record Deleted");
 
                 }
                 catch (Exception ex)
@@ -307,6 +245,60 @@ namespace SleepEasyHotel.PresentationLayer
                 }
 
             }
+        }
+
+
+       
+            private bool ValidateForm()
+            {
+                string errMsg = "";
+
+            if (cmbUpdateFname.Text == "")
+            {
+                errMsg = "Please select a staff. \n";
+            }
+            else if (txtLastName.Text == "")
+                {
+                    errMsg = "Missing Last name. \n";
+                }
+                else if (txtFirstName.Text == "")
+                {
+                    errMsg = "Missing first name. \n";
+                }
+                else if (txtEmail.Text == "")
+                {
+                    errMsg = "Missing Email. \n";
+                }
+                else if (txtPhone.Text == "")
+                {
+                    errMsg = "Missing Phone. \n";
+                }
+                else if (txtTitle.Text == "")
+                {
+                    errMsg = "Missing Title. \n";
+                }
+                 else if (cmbPID.Text == "")
+                 {
+                errMsg = "Please select a position Id. \n";
+                 }
+
+
+            if (errMsg.Length > 0)
+                {
+                    MessageBox.Show(errMsg);
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            
+                }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            cmbUpdateFname.Items.Clear();
+            PopulateStaffCombo();
         }
     }
 }

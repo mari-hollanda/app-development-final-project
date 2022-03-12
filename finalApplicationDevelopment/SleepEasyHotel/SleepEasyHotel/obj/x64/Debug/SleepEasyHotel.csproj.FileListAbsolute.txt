@@ -12,3 +12,21 @@ C:\Users\azam\Documents\cis_2261_final_project\finalApplicationDevelopment\Sleep
 C:\Users\azam\Documents\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\x64\Debug\SleepEasyHotel.exe
 C:\Users\azam\Documents\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\x64\Debug\SleepEasyHotel.pdb
 C:\Users\azam\Documents\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\x64\Debug\SleepEasyHotel.PresentationLayer.staffServices.resources
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\bin\x64\Debug\SleepEasyHotelDatabase.accdb
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\bin\x64\Debug\SleepEasyHotel.exe.config
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\bin\x64\Debug\SleepEasyHotel.exe
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\bin\x64\Debug\SleepEasyHotel.pdb
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\x64\Debug\SleepEasyHotel.csproj.AssemblyReference.cache
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\x64\Debug\SleepEasyHotel.Login.resources
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\x64\Debug\SleepEasyHotel.PresentationLayer.RegistrationServices.resources
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\x64\Debug\SleepEasyHotel.Properties.Resources.resources
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\x64\Debug\SleepEasyHotel.csproj.GenerateResource.cache
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\x64\Debug\SleepEasyHotel.csproj.CoreCompileInputs.cache
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\x64\Debug\SleepEasyHotel.exe
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\x64\Debug\SleepEasyHotel.pdb
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\x64\Debug\SleepEasyHotel.PresentationLayer.mainFrm.resources
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\x64\Debug\SleepEasyHotel.PresentationLayer.frmGuestRegistration.resources
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\x64\Debug\SleepEasyHotel.PresentationLayer.frmBookedRooms.resources
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\x64\Debug\SleepEasyHotel.PresentationLayer.frmStaffRegistration.resources
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\x64\Debug\SleepEasyHotel.PresentationLayer.frmStaffUpdate.resources
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\x64\Debug\SleepEasyHotel.PresentationLayer.frmUpdateRooms.resources
