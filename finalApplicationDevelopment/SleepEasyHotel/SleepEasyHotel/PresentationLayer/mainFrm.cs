@@ -267,5 +267,14 @@ namespace SleepEasyHotel.PresentationLayer
             this.Hide();
             login.Show();
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Do you want to close the application?", "Closing event!", MessageBoxButtons.YesNo);
+            if (dr == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

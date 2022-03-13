@@ -30,6 +30,7 @@ namespace SleepEasyHotel.PresentationLayer
         private void InitializeComponent()
         {
             this.grpPosition = new System.Windows.Forms.GroupBox();
+            this.cmbPID = new System.Windows.Forms.ComboBox();
             this.lblPosition = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.txtTitle = new System.Windows.Forms.TextBox();
@@ -42,7 +43,6 @@ namespace SleepEasyHotel.PresentationLayer
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblLastName = new System.Windows.Forms.Label();
             this.txtLastName = new System.Windows.Forms.TextBox();
-            this.cmbPID = new System.Windows.Forms.ComboBox();
             this.btnRegister = new System.Windows.Forms.Button();
             this.grpPosition.SuspendLayout();
             this.grpPersonalData.SuspendLayout();
@@ -62,6 +62,18 @@ namespace SleepEasyHotel.PresentationLayer
             this.grpPosition.TabIndex = 65;
             this.grpPosition.TabStop = false;
             this.grpPosition.Text = "Position";
+            // 
+            // cmbPID
+            // 
+            this.cmbPID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbPID.FormattingEnabled = true;
+            this.cmbPID.Items.AddRange(new object[] {
+            "1",
+            "2"});
+            this.cmbPID.Location = new System.Drawing.Point(11, 48);
+            this.cmbPID.Name = "cmbPID";
+            this.cmbPID.Size = new System.Drawing.Size(160, 21);
+            this.cmbPID.TabIndex = 4;
             // 
             // lblPosition
             // 
@@ -91,7 +103,7 @@ namespace SleepEasyHotel.PresentationLayer
             this.txtTitle.Margin = new System.Windows.Forms.Padding(4);
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(189, 20);
-            this.txtTitle.TabIndex = 6;
+            this.txtTitle.TabIndex = 5;
             // 
             // grpPersonalData
             // 
@@ -128,7 +140,7 @@ namespace SleepEasyHotel.PresentationLayer
             this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(175, 20);
-            this.txtPhone.TabIndex = 3;
+            this.txtPhone.TabIndex = 2;
             // 
             // txtFirstName
             // 
@@ -138,7 +150,7 @@ namespace SleepEasyHotel.PresentationLayer
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(212, 20);
-            this.txtFirstName.TabIndex = 1;
+            this.txtFirstName.TabIndex = 0;
             // 
             // lblEmail
             // 
@@ -168,7 +180,7 @@ namespace SleepEasyHotel.PresentationLayer
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(399, 20);
-            this.txtEmail.TabIndex = 4;
+            this.txtEmail.TabIndex = 3;
             // 
             // lblLastName
             // 
@@ -188,26 +200,14 @@ namespace SleepEasyHotel.PresentationLayer
             this.txtLastName.Margin = new System.Windows.Forms.Padding(4);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(362, 20);
-            this.txtLastName.TabIndex = 2;
-            // 
-            // cmbPID
-            // 
-            this.cmbPID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPID.FormattingEnabled = true;
-            this.cmbPID.Items.AddRange(new object[] {
-            "1",
-            "2"});
-            this.cmbPID.Location = new System.Drawing.Point(11, 48);
-            this.cmbPID.Name = "cmbPID";
-            this.cmbPID.Size = new System.Drawing.Size(160, 21);
-            this.cmbPID.TabIndex = 35;
+            this.txtLastName.TabIndex = 1;
             // 
             // btnRegister
             // 
             this.btnRegister.Location = new System.Drawing.Point(471, 222);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(151, 41);
-            this.btnRegister.TabIndex = 66;
+            this.btnRegister.TabIndex = 6;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = true;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);

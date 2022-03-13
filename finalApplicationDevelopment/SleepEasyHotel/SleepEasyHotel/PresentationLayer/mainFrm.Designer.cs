@@ -56,7 +56,7 @@ namespace SleepEasyHotel.PresentationLayer
             this.tbcApplication.Name = "tbcApplication";
             this.tbcApplication.SelectedIndex = 0;
             this.tbcApplication.Size = new System.Drawing.Size(800, 426);
-            this.tbcApplication.TabIndex = 4;
+            this.tbcApplication.TabIndex = 60;
             // 
             // mainStrp
             // 
@@ -87,7 +87,7 @@ namespace SleepEasyHotel.PresentationLayer
             // 
             this.disconnectToolStripMenuItem.Name = "disconnectToolStripMenuItem";
             this.disconnectToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.disconnectToolStripMenuItem.Text = "LogOut";
+            this.disconnectToolStripMenuItem.Text = "Logout";
             this.disconnectToolStripMenuItem.Click += new System.EventHandler(this.disconnectToolStripMenuItem_Click);
             // 
             // clearTabToolStripMenuItem
@@ -102,6 +102,7 @@ namespace SleepEasyHotel.PresentationLayer
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // registrationToolStripMenuItem
             // 
@@ -187,7 +188,7 @@ namespace SleepEasyHotel.PresentationLayer
             this.Controls.Add(this.tbcApplication);
             this.Controls.Add(this.mainStrp);
             this.Name = "mainFrm";
-            this.Text = "mainFrm";
+            this.Text = "SleepEasy Hotel";
             this.Load += new System.EventHandler(this.mainFrm_Load);
             this.mainStrp.ResumeLayout(false);
             this.mainStrp.PerformLayout();

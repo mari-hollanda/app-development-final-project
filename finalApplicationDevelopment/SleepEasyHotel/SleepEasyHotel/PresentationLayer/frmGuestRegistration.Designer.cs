@@ -65,7 +65,7 @@ namespace SleepEasyHotel.PresentationLayer
             this.grpBooking.Controls.Add(this.cmbRoomAvailable);
             this.grpBooking.Controls.Add(this.lblRoomAvailable);
             this.grpBooking.Controls.Add(this.lblCheckInDate);
-            this.grpBooking.Location = new System.Drawing.Point(511, 203);
+            this.grpBooking.Location = new System.Drawing.Point(427, 161);
             this.grpBooking.Margin = new System.Windows.Forms.Padding(4);
             this.grpBooking.Name = "grpBooking";
             this.grpBooking.Padding = new System.Windows.Forms.Padding(4);
@@ -121,7 +121,7 @@ namespace SleepEasyHotel.PresentationLayer
             this.grpAddress.Controls.Add(this.txtCity);
             this.grpAddress.Controls.Add(this.lblProvince);
             this.grpAddress.Controls.Add(this.txtProvince);
-            this.grpAddress.Location = new System.Drawing.Point(101, 201);
+            this.grpAddress.Location = new System.Drawing.Point(17, 159);
             this.grpAddress.Margin = new System.Windows.Forms.Padding(4);
             this.grpAddress.Name = "grpAddress";
             this.grpAddress.Padding = new System.Windows.Forms.Padding(4);
@@ -214,7 +214,7 @@ namespace SleepEasyHotel.PresentationLayer
             this.grpPersonalData.Controls.Add(this.txtEmail);
             this.grpPersonalData.Controls.Add(this.lblLastName);
             this.grpPersonalData.Controls.Add(this.txtLastName);
-            this.grpPersonalData.Location = new System.Drawing.Point(101, 58);
+            this.grpPersonalData.Location = new System.Drawing.Point(17, 16);
             this.grpPersonalData.Margin = new System.Windows.Forms.Padding(4);
             this.grpPersonalData.Name = "grpPersonalData";
             this.grpPersonalData.Padding = new System.Windows.Forms.Padding(4);
@@ -303,7 +303,7 @@ namespace SleepEasyHotel.PresentationLayer
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(319, 344);
+            this.btnRegister.Location = new System.Drawing.Point(235, 302);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(221, 31);
             this.btnRegister.TabIndex = 64;
@@ -313,7 +313,7 @@ namespace SleepEasyHotel.PresentationLayer
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(101, 346);
+            this.btnRefresh.Location = new System.Drawing.Point(17, 304);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(105, 29);
             this.btnRefresh.TabIndex = 65;
@@ -331,7 +331,7 @@ namespace SleepEasyHotel.PresentationLayer
             this.Controls.Add(this.grpAddress);
             this.Controls.Add(this.grpPersonalData);
             this.Name = "frmGuestRegistration";
-            this.Size = new System.Drawing.Size(832, 399);
+            this.Size = new System.Drawing.Size(668, 356);
             this.Load += new System.EventHandler(this.frmGuestRegistration_Load);
             this.grpBooking.ResumeLayout(false);
             this.grpBooking.PerformLayout();

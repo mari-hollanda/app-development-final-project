@@ -194,21 +194,29 @@ namespace SleepEasyHotel.PresentationLayer
             string errMsg = "";
 
 
-            if (txtLastName.Text == "")
+            if (txtFirstName.Text == "")
             {
-                errMsg = "Missing Last name. \n";
+                errMsg = "Missing First Name. \n";
             }
-            else if (txtFirstName.Text == "")
+            else if (txtLastName.Text == "")
             {
-                errMsg = "Missing first name. \n";
+                errMsg = "Missing Last Name. \n";
+            }
+            else if (txtPhone.Text == "")
+            {
+                errMsg = "Missing Phone. \n";
             }
             else if (txtEmail.Text == "")
             {
                 errMsg = "Missing Email. \n";
             }
-            else if (txtPhone.Text == "")
+            else if (txtZipCode.Text == "")
             {
-                errMsg = "Missing Phone. \n";
+                errMsg = "Missing Zip Code \n";
+            }
+            else if (txtStreet.Text == "")
+            {
+                errMsg = "Missing Street \n";
             }
             else if (txtCity.Text == "")
             {
@@ -217,14 +225,6 @@ namespace SleepEasyHotel.PresentationLayer
             else if (txtProvince.Text == "")
             {
                 errMsg = "Missing Province \n";
-            }
-            else if (txtStreet.Text == "")
-            {
-                errMsg = "Missing Street \n";
-            }
-            else if (txtZipCode.Text == "")
-            {
-                errMsg = "Missing Zip Code \n";
             }
             else if (cmbRoomAvailable.Text == "")
             {

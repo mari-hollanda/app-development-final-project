@@ -41,7 +41,7 @@ namespace SleepEasyHotel
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(372, 171);
+            this.btnLogin.Location = new System.Drawing.Point(203, 110);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 23);
             this.btnLogin.TabIndex = 3;
@@ -51,7 +51,7 @@ namespace SleepEasyHotel
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(322, 52);
+            this.txtUsername.Location = new System.Drawing.Point(153, 31);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(167, 20);
             this.txtUsername.TabIndex = 1;
@@ -59,7 +59,7 @@ namespace SleepEasyHotel
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(223, 59);
+            this.lblUsername.Location = new System.Drawing.Point(200, 15);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(68, 13);
             this.lblUsername.TabIndex = 3;
@@ -68,7 +68,7 @@ namespace SleepEasyHotel
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(223, 123);
+            this.lblPassword.Location = new System.Drawing.Point(200, 66);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(70, 13);
             this.lblPassword.TabIndex = 4;
@@ -77,7 +77,7 @@ namespace SleepEasyHotel
             // loginPic
             // 
             this.loginPic.Image = ((System.Drawing.Image)(resources.GetObject("loginPic.Image")));
-            this.loginPic.Location = new System.Drawing.Point(48, 43);
+            this.loginPic.Location = new System.Drawing.Point(13, 13);
             this.loginPic.Margin = new System.Windows.Forms.Padding(4);
             this.loginPic.Name = "loginPic";
             this.loginPic.Size = new System.Drawing.Size(133, 114);
@@ -87,7 +87,7 @@ namespace SleepEasyHotel
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(322, 116);
+            this.txtPassword.Location = new System.Drawing.Point(153, 83);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -98,7 +98,7 @@ namespace SleepEasyHotel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(518, 227);
+            this.ClientSize = new System.Drawing.Size(347, 147);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.loginPic);
             this.Controls.Add(this.lblPassword);

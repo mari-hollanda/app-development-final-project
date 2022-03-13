@@ -92,31 +92,30 @@ namespace SleepEasyHotel.PresentationLayer
             string errMsg = "";
 
             
-             if (txtLastName.Text == "")
+             if (txtFirstName.Text == "")
             {
-                errMsg = "Missing Last name. \n";
+                errMsg = "Missing First Name. \n";
             }
-            else if (txtFirstName.Text == "")
+            else if (txtLastName.Text == "")
             {
-                errMsg = "Missing first name. \n";
-            }
-            else if (txtEmail.Text == "")
-            {
-                errMsg = "Missing Email. \n";
+                errMsg = "Missing Last Name. \n";
             }
             else if (txtPhone.Text == "")
             {
                 errMsg = "Missing Phone. \n";
             }
-            else if (txtTitle.Text == "")
+            else if (txtEmail.Text == "")
             {
-                errMsg = "Missing Title. \n";
+                errMsg = "Missing Email. \n";
             }
             else if (cmbPID.Text == "")
             {
                 errMsg = "Please select a position Id. \n";
             }
-
+            else if (txtTitle.Text == "")
+            {
+                errMsg = "Missing Title. \n";
+            }
 
             if (errMsg.Length > 0)
             {
