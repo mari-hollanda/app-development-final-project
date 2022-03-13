@@ -316,5 +316,11 @@ namespace SleepEasyHotel.PresentationLayer
             }
 
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            cmbRoomID.Items.Clear();
+            PopulatedRooms();
+        }
     }
 }

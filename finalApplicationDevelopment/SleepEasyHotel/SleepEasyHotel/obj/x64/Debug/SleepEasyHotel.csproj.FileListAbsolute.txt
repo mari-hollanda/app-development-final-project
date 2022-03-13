@@ -18,7 +18,6 @@ C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicat
 C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\bin\x64\Debug\SleepEasyHotel.pdb
 C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\x64\Debug\SleepEasyHotel.csproj.AssemblyReference.cache
 C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\x64\Debug\SleepEasyHotel.Login.resources
-C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\x64\Debug\SleepEasyHotel.PresentationLayer.RegistrationServices.resources
 C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\x64\Debug\SleepEasyHotel.Properties.Resources.resources
 C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\x64\Debug\SleepEasyHotel.csproj.GenerateResource.cache
 C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\x64\Debug\SleepEasyHotel.csproj.CoreCompileInputs.cache
@@ -30,3 +29,5 @@ C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicat
 C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\x64\Debug\SleepEasyHotel.PresentationLayer.frmStaffRegistration.resources
 C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\x64\Debug\SleepEasyHotel.PresentationLayer.frmStaffUpdate.resources
 C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\x64\Debug\SleepEasyHotel.PresentationLayer.frmUpdateRooms.resources
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\x64\Debug\SleepEasyHotel.PresentationLayer.frmCreateService.resources
+C:\Users\19023\Desktop\Joye's Final Project\cis_2261_final_project\finalApplicationDevelopment\SleepEasyHotel\SleepEasyHotel\obj\x64\Debug\SleepEasyHotel.PresentationLayer.frmUpdateService.resources

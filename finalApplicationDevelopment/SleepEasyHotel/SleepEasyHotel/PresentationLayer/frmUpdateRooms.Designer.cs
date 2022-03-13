@@ -30,9 +30,13 @@ namespace SleepEasyHotel.PresentationLayer
         private void InitializeComponent()
         {
             this.grpBooking = new System.Windows.Forms.GroupBox();
+            this.dtpCheckInDate = new System.Windows.Forms.DateTimePicker();
+            this.dtpCheckOutDate = new System.Windows.Forms.DateTimePicker();
             this.lblCheckIn = new System.Windows.Forms.Label();
             this.lblCheckOut = new System.Windows.Forms.Label();
             this.grpRooms = new System.Windows.Forms.GroupBox();
+            this.cmbRoomStatus = new System.Windows.Forms.ComboBox();
+            this.cmbRoomType = new System.Windows.Forms.ComboBox();
             this.cmbRoomID = new System.Windows.Forms.ComboBox();
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblStaff = new System.Windows.Forms.Label();
@@ -40,12 +44,9 @@ namespace SleepEasyHotel.PresentationLayer
             this.txtStaff = new System.Windows.Forms.TextBox();
             this.lblRoomType = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.dtpCheckOutDate = new System.Windows.Forms.DateTimePicker();
-            this.dtpCheckInDate = new System.Windows.Forms.DateTimePicker();
-            this.cmbRoomType = new System.Windows.Forms.ComboBox();
-            this.cmbRoomStatus = new System.Windows.Forms.ComboBox();
             this.lblRoom = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.grpBooking.SuspendLayout();
             this.grpRooms.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +65,22 @@ namespace SleepEasyHotel.PresentationLayer
             this.grpBooking.TabIndex = 65;
             this.grpBooking.TabStop = false;
             this.grpBooking.Text = "Booking";
+            // 
+            // dtpCheckInDate
+            // 
+            this.dtpCheckInDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpCheckInDate.Location = new System.Drawing.Point(78, 28);
+            this.dtpCheckInDate.Name = "dtpCheckInDate";
+            this.dtpCheckInDate.Size = new System.Drawing.Size(175, 20);
+            this.dtpCheckInDate.TabIndex = 38;
+            // 
+            // dtpCheckOutDate
+            // 
+            this.dtpCheckOutDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpCheckOutDate.Location = new System.Drawing.Point(78, 76);
+            this.dtpCheckOutDate.Name = "dtpCheckOutDate";
+            this.dtpCheckOutDate.Size = new System.Drawing.Size(175, 20);
+            this.dtpCheckOutDate.TabIndex = 37;
             // 
             // lblCheckIn
             // 
@@ -103,6 +120,31 @@ namespace SleepEasyHotel.PresentationLayer
             this.grpRooms.TabIndex = 64;
             this.grpRooms.TabStop = false;
             this.grpRooms.Text = "Room";
+            // 
+            // cmbRoomStatus
+            // 
+            this.cmbRoomStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRoomStatus.FormattingEnabled = true;
+            this.cmbRoomStatus.Items.AddRange(new object[] {
+            "Empty",
+            "Occupied"});
+            this.cmbRoomStatus.Location = new System.Drawing.Point(11, 98);
+            this.cmbRoomStatus.Name = "cmbRoomStatus";
+            this.cmbRoomStatus.Size = new System.Drawing.Size(148, 21);
+            this.cmbRoomStatus.TabIndex = 48;
+            // 
+            // cmbRoomType
+            // 
+            this.cmbRoomType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRoomType.FormattingEnabled = true;
+            this.cmbRoomType.Items.AddRange(new object[] {
+            "K",
+            "Q",
+            "D"});
+            this.cmbRoomType.Location = new System.Drawing.Point(132, 45);
+            this.cmbRoomType.Name = "cmbRoomType";
+            this.cmbRoomType.Size = new System.Drawing.Size(148, 21);
+            this.cmbRoomType.TabIndex = 47;
             // 
             // cmbRoomID
             // 
@@ -174,47 +216,6 @@ namespace SleepEasyHotel.PresentationLayer
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // dtpCheckOutDate
-            // 
-            this.dtpCheckOutDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpCheckOutDate.Location = new System.Drawing.Point(78, 76);
-            this.dtpCheckOutDate.Name = "dtpCheckOutDate";
-            this.dtpCheckOutDate.Size = new System.Drawing.Size(175, 20);
-            this.dtpCheckOutDate.TabIndex = 37;
-            // 
-            // dtpCheckInDate
-            // 
-            this.dtpCheckInDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpCheckInDate.Location = new System.Drawing.Point(78, 28);
-            this.dtpCheckInDate.Name = "dtpCheckInDate";
-            this.dtpCheckInDate.Size = new System.Drawing.Size(175, 20);
-            this.dtpCheckInDate.TabIndex = 38;
-            // 
-            // cmbRoomType
-            // 
-            this.cmbRoomType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbRoomType.FormattingEnabled = true;
-            this.cmbRoomType.Items.AddRange(new object[] {
-            "K",
-            "Q",
-            "D"});
-            this.cmbRoomType.Location = new System.Drawing.Point(132, 45);
-            this.cmbRoomType.Name = "cmbRoomType";
-            this.cmbRoomType.Size = new System.Drawing.Size(148, 21);
-            this.cmbRoomType.TabIndex = 47;
-            // 
-            // cmbRoomStatus
-            // 
-            this.cmbRoomStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbRoomStatus.FormattingEnabled = true;
-            this.cmbRoomStatus.Items.AddRange(new object[] {
-            "Empty",
-            "Occupied"});
-            this.cmbRoomStatus.Location = new System.Drawing.Point(11, 98);
-            this.cmbRoomStatus.Name = "cmbRoomStatus";
-            this.cmbRoomStatus.Size = new System.Drawing.Size(148, 21);
-            this.cmbRoomStatus.TabIndex = 48;
-            // 
             // lblRoom
             // 
             this.lblRoom.AutoSize = true;
@@ -234,10 +235,21 @@ namespace SleepEasyHotel.PresentationLayer
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(31, 360);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(77, 23);
+            this.btnRefresh.TabIndex = 67;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // frmUpdateRooms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.lblRoom);
             this.Controls.Add(this.btnUpdate);
@@ -274,5 +286,6 @@ namespace SleepEasyHotel.PresentationLayer
         private System.Windows.Forms.ComboBox cmbRoomType;
         private System.Windows.Forms.Label lblRoom;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

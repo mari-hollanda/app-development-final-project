@@ -43,7 +43,8 @@ namespace SleepEasyHotel.PresentationLayer
             this.updateStaffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.roomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.servicesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createServiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateServiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainStrp.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +57,6 @@ namespace SleepEasyHotel.PresentationLayer
             this.tbcApplication.SelectedIndex = 0;
             this.tbcApplication.Size = new System.Drawing.Size(800, 426);
             this.tbcApplication.TabIndex = 4;
-            this.tbcApplication.SelectedIndexChanged += new System.EventHandler(this.tbcApplication_SelectedIndexChanged);
             // 
             // mainStrp
             // 
@@ -66,8 +66,7 @@ namespace SleepEasyHotel.PresentationLayer
             this.registrationToolStripMenuItem,
             this.staffToolStripMenuItem,
             this.roomToolStripMenuItem,
-            this.servicesToolStripMenuItem,
-            this.inventoryToolStripMenuItem});
+            this.servicesToolStripMenuItem});
             this.mainStrp.Location = new System.Drawing.Point(0, 0);
             this.mainStrp.Name = "mainStrp";
             this.mainStrp.Size = new System.Drawing.Size(800, 24);
@@ -89,6 +88,7 @@ namespace SleepEasyHotel.PresentationLayer
             this.disconnectToolStripMenuItem.Name = "disconnectToolStripMenuItem";
             this.disconnectToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.disconnectToolStripMenuItem.Text = "LogOut";
+            this.disconnectToolStripMenuItem.Click += new System.EventHandler(this.disconnectToolStripMenuItem_Click);
             // 
             // clearTabToolStripMenuItem
             // 
@@ -115,14 +115,14 @@ namespace SleepEasyHotel.PresentationLayer
             // guestRegistrationToolStripMenuItem
             // 
             this.guestRegistrationToolStripMenuItem.Name = "guestRegistrationToolStripMenuItem";
-            this.guestRegistrationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.guestRegistrationToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.guestRegistrationToolStripMenuItem.Text = "Guest Registration";
             this.guestRegistrationToolStripMenuItem.Click += new System.EventHandler(this.guestRegistrationToolStripMenuItem_Click);
             // 
             // bookedRoomsToolStripMenuItem
             // 
             this.bookedRoomsToolStripMenuItem.Name = "bookedRoomsToolStripMenuItem";
-            this.bookedRoomsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bookedRoomsToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.bookedRoomsToolStripMenuItem.Text = "Booked Rooms";
             this.bookedRoomsToolStripMenuItem.Click += new System.EventHandler(this.bookedRoomsToolStripMenuItem_Click);
             // 
@@ -138,14 +138,14 @@ namespace SleepEasyHotel.PresentationLayer
             // staffRegistrationToolStripMenuItem
             // 
             this.staffRegistrationToolStripMenuItem.Name = "staffRegistrationToolStripMenuItem";
-            this.staffRegistrationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.staffRegistrationToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.staffRegistrationToolStripMenuItem.Text = "Staff Registration";
             this.staffRegistrationToolStripMenuItem.Click += new System.EventHandler(this.staffRegistrationToolStripMenuItem_Click);
             // 
             // updateStaffToolStripMenuItem
             // 
             this.updateStaffToolStripMenuItem.Name = "updateStaffToolStripMenuItem";
-            this.updateStaffToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.updateStaffToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.updateStaffToolStripMenuItem.Text = "Staff Update";
             this.updateStaffToolStripMenuItem.Click += new System.EventHandler(this.updateStaffToolStripMenuItem_Click);
             // 
@@ -158,15 +158,26 @@ namespace SleepEasyHotel.PresentationLayer
             // 
             // servicesToolStripMenuItem
             // 
+            this.servicesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.createServiceToolStripMenuItem,
+            this.updateServiceToolStripMenuItem});
             this.servicesToolStripMenuItem.Name = "servicesToolStripMenuItem";
             this.servicesToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.servicesToolStripMenuItem.Text = "Services";
             // 
-            // inventoryToolStripMenuItem
+            // createServiceToolStripMenuItem
             // 
-            this.inventoryToolStripMenuItem.Name = "inventoryToolStripMenuItem";
-            this.inventoryToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
-            this.inventoryToolStripMenuItem.Text = "Inventory";
+            this.createServiceToolStripMenuItem.Name = "createServiceToolStripMenuItem";
+            this.createServiceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.createServiceToolStripMenuItem.Text = "Create Service";
+            this.createServiceToolStripMenuItem.Click += new System.EventHandler(this.createServiceToolStripMenuItem_Click);
+            // 
+            // updateServiceToolStripMenuItem
+            // 
+            this.updateServiceToolStripMenuItem.Name = "updateServiceToolStripMenuItem";
+            this.updateServiceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.updateServiceToolStripMenuItem.Text = "Update Service";
+            this.updateServiceToolStripMenuItem.Click += new System.EventHandler(this.updateServiceToolStripMenuItem_Click);
             // 
             // mainFrm
             // 
@@ -199,8 +210,9 @@ namespace SleepEasyHotel.PresentationLayer
         private System.Windows.Forms.ToolStripMenuItem staffToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem roomToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem servicesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem inventoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem staffRegistrationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateStaffToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createServiceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateServiceToolStripMenuItem;
     }
 }

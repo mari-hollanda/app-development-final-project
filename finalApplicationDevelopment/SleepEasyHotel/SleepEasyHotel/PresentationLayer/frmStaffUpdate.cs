@@ -233,7 +233,7 @@ namespace SleepEasyHotel.PresentationLayer
                     dbConn.Close();
 
                     //ClearForm();
-                   
+                  
                     cmbUpdateFname.Items.Clear();
                     PopulateStaffCombo();
                     MessageBox.Show("Record Deleted");

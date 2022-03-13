@@ -19,9 +19,9 @@ namespace SleepEasyHotel.PresentationLayer
         int StaffRegistration = 0;
         int StaffUpdate = 0;
         int Rooms = 0;
-        int Services = 0;
-        int Inventory = 0;
-
+        int createServices = 0;
+        int updateServices = 0;
+        int loginCreate = 0;
 
         string username;
         string PositionID;
@@ -53,18 +53,23 @@ namespace SleepEasyHotel.PresentationLayer
             {
                 Rooms = 0;
             }
-            if (TB.Name == "Services")
+            if (TB.Name == "Create service")
             {
-                Services = 0;
+                createServices = 0;
             }
-            if (TB.Name == "Inventory")
+            if (TB.Name == "Update service")
             {
-                Inventory = 0;
+                updateServices = 0;
             }
             if (TB.Name == "Staff Update")
             {
                 StaffUpdate = 0;
             }
+            if (TB.Name == "Create Login")
+            {
+                loginCreate = 0;
+            }
+            
             tbcApplication.TabPages.Remove(TB);
         }
 
@@ -85,19 +90,17 @@ namespace SleepEasyHotel.PresentationLayer
                 staffToolStripMenuItem.Enabled = true;
                 roomToolStripMenuItem.Enabled = true;
                 servicesToolStripMenuItem.Enabled = true;
-                inventoryToolStripMenuItem.Enabled = true;
             }
             else if (PositionID == "2")
             {
-                clearTabToolStripMenuItem.Enabled = false;
+                clearTabToolStripMenuItem.Enabled = true;
                 registrationToolStripMenuItem.Enabled = true;
-                disconnectToolStripMenuItem.Enabled = false;
-                guestRegistrationToolStripMenuItem.Enabled = false;
-                bookedRoomsToolStripMenuItem.Enabled = false;
+                disconnectToolStripMenuItem.Enabled = true;
+                guestRegistrationToolStripMenuItem.Enabled = true;
+                bookedRoomsToolStripMenuItem.Enabled = true;
                 staffToolStripMenuItem.Enabled = false;
                 roomToolStripMenuItem.Enabled = false;
                 servicesToolStripMenuItem.Enabled = false;
-                inventoryToolStripMenuItem.Enabled = false;
             }
             else {
                 clearTabToolStripMenuItem.Enabled = false;
@@ -108,7 +111,6 @@ namespace SleepEasyHotel.PresentationLayer
                 staffToolStripMenuItem.Enabled = false;
                 roomToolStripMenuItem.Enabled = false;
                 servicesToolStripMenuItem.Enabled = false;
-                inventoryToolStripMenuItem.Enabled = false;
             }
         }
 
@@ -198,16 +200,13 @@ namespace SleepEasyHotel.PresentationLayer
             }
         }
 
-        private void tbcApplication_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
+        
 
         private void roomToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (StaffUpdate == 0)
+            if (Rooms == 0)
             {
-                StaffUpdate += 1;
+                Rooms += 1;
                 frmUpdateRooms U = new frmUpdateRooms();
                 U.Dock = DockStyle.Fill;
                 TabPage TB = new TabPage();
@@ -220,6 +219,53 @@ namespace SleepEasyHotel.PresentationLayer
             {
                 MessageBox.Show("Tab already opened.", "SleepEasy", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        
+
+        private void createServiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (createServices == 0)
+            {
+                createServices += 1;
+                frmCreateService U = new frmCreateService();
+                U.Dock = DockStyle.Fill;
+                TabPage TB = new TabPage();
+                TB.Name = "Create service";
+                TB.Text = "Create service";
+                TB.Controls.Add(U);
+                tbcApplication.TabPages.Add(TB);
+            }
+            else
+            {
+                MessageBox.Show("Tab already opened.", "SleepEasy", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void updateServiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (updateServices == 0)
+            {
+                updateServices += 1;
+                frmUpdateService U = new frmUpdateService();
+                U.Dock = DockStyle.Fill;
+                TabPage TB = new TabPage();
+                TB.Name = "Update service";
+                TB.Text = "Update service";
+                TB.Controls.Add(U);
+                tbcApplication.TabPages.Add(TB);
+            }
+            else
+            {
+                MessageBox.Show("Tab already opened.", "SleepEasy", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void disconnectToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Hide();
+            login.Show();
         }
     }
 }
