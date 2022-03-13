@@ -250,6 +250,7 @@ namespace SleepEasyHotel.PresentationLayer
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+            ClearForm();
             cmbRoomAvailable.Items.Clear();
             PopulateAvailableRoomCombo();
         }

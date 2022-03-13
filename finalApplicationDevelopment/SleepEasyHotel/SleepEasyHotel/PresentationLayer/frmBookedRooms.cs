@@ -187,6 +187,7 @@ namespace SleepEasyHotel.PresentationLayer
 
         private void ClearForm()
         {
+            lblGuestID.Text = "Guest Id";
             txtEmail.Clear();
             txtCheckInDate.Clear();
             txtFirstName.Clear();
@@ -256,7 +257,7 @@ namespace SleepEasyHotel.PresentationLayer
                     //create query to update selected Guest record
                     string sql;
                     sql = "UPDATE Rooms SET RoomStatus='Empty',CheckOut='" + dtpCheckOutDate.Text + "' WHERE RoomID='" + cmbRoomNumber.Text + "';";
-                    MessageBox.Show(dtpCheckOutDate.Text);
+                   
                     //create database command
                     OleDbCommand dbCmd = new OleDbCommand();
 
@@ -303,6 +304,7 @@ namespace SleepEasyHotel.PresentationLayer
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            ClearForm();
             rtbTotal.Clear();
             total = 0;
             serviceTotal = 0;
@@ -420,6 +422,7 @@ namespace SleepEasyHotel.PresentationLayer
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+            ClearForm();
             cmbRoomNumber.Items.Clear();
             PopulateBookedRooms();
         }

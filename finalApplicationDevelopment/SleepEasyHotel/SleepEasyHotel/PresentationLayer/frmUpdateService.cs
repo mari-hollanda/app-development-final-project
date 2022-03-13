@@ -136,6 +136,7 @@ namespace SleepEasyHotel.PresentationLayer
                     dbConn.Close();
 
                     // ClearForm();
+                    lblServiceID.Text = "Service ID";
                     txtDescription.Clear();
                     txtPrice.Clear();
                     txtType.Clear();
@@ -237,6 +238,7 @@ namespace SleepEasyHotel.PresentationLayer
                     dbConn.Close();
 
                     // ClearForm();
+                    lblServiceID.Text = "Service ID";
                     txtDescription.Clear();
                     txtPrice.Clear();
                     txtType.Clear();
@@ -255,6 +257,12 @@ namespace SleepEasyHotel.PresentationLayer
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+            lblServiceID.Text = "Service ID";
+            txtDescription.Clear();
+            txtPrice.Clear();
+            txtType.Clear();
+            cmbDescription.Items.Clear();
+            PopulateServices();
             cmbDescription.Items.Clear();
             PopulateServices();
         }

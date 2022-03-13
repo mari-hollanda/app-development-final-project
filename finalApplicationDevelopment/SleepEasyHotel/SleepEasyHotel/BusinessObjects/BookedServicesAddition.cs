@@ -22,12 +22,20 @@ namespace SleepEasyHotel.BusinessObjects
         {
             CheckIn = checkin;
             CheckOut = checkout;
+            if (checkin == "" || checkout == "")
+                {
+                return 0;
+            }
+            else 
+            {
+                DateTime st = DateTime.Parse(CheckIn);
+                DateTime end = DateTime.Parse(CheckOut);
+                TimeSpan difference = end - st;
 
-            DateTime st = DateTime.Parse(CheckIn);
-            DateTime end = DateTime.Parse(CheckOut);
-            TimeSpan difference = end - st;
+                return total = (difference.Days * costPerNight);
+            }
+
             
-           return total = (difference.Days * costPerNight);
         }
 
        

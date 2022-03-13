@@ -69,7 +69,7 @@ namespace SleepEasyHotel.PresentationLayer
 
         private void ClearForm()
         {
-
+            lblStaffIDUpdateSelect.Text="";
             cmbUpdateFname.Items.Clear();
 
             txtFirstName.Clear();
@@ -297,6 +297,7 @@ namespace SleepEasyHotel.PresentationLayer
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+            ClearForm();
             cmbUpdateFname.Items.Clear();
             PopulateStaffCombo();
         }
