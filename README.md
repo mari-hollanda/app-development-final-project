@@ -45,11 +45,12 @@ For the program to run the user needs to have both Microsoft Visual Studio and S
 <br>
 
 <h4><b>Installation</b></h4>
-1. Download [Microsoft Visual Studio] (https://visualstudio.microsoft.com/downloads/)
-2. Download [Source Tree] (https://www.sourcetreeapp.com)
-3. Clone the project from [Bitbucket] (https://bitbucket.org/badal90198/cis_2261_final_project/src/master/) to Sourcetree
+1. Download Microsoft Visual Studio
+2. Download Source Tree
+3. Clone the project from Bitbucket to Sourcetree
 4. Open the project on Microsoft Visual Studio
 5. Run the solution
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 <br>
 
@@ -65,6 +66,6 @@ Marianna Hollanda (Project Manager) - mhollandacampos@hollandcollege.com
 <br>
 Project Link: [Bitbucket](https://bitbucket.org/badal90198/cis_2261_final_project/src/master/)
 <p align="right">(<a href="#top">back to top</a>)</p>
-
+ 
 
 
