@@ -144,7 +144,7 @@ namespace SleepEasyHotel.PresentationLayer
                     lblGuestID.Text= dbReader["GuestID"].ToString();
                     txtFirstName.Text = dbReader["LastName"].ToString();
                     txtLastName.Text= dbReader["FirstName"].ToString();
-                    name = txtFirstName.Text+" "+ txtLastName.Text;
+                    name = txtLastName.Text+" "+ txtFirstName.Text;
                     txtCheckInDate.Text = dbReader["CheckIn"].ToString();
                     checkIn = txtCheckInDate.Text;
                     txtEmail.Text = dbReader["email"].ToString();
