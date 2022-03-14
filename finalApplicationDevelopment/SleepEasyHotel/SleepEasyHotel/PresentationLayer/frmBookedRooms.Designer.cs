@@ -217,7 +217,7 @@ namespace SleepEasyHotel.PresentationLayer
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(349, 17);
+            this.lblLastName.Location = new System.Drawing.Point(349, 26);
             this.lblLastName.Name = "lblLastName";
             this.lblLastName.Size = new System.Drawing.Size(58, 13);
             this.lblLastName.TabIndex = 47;

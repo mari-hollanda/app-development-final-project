@@ -133,7 +133,7 @@ namespace SleepEasyHotel.PresentationLayer
                 dbCmd.Connection = dbConn;
                 //create OleDbDataReader dbReader
                 OleDbDataReader dbReader;
-                ////////Read data into dbReader
+                //Read data into dbReader
                 dbReader = dbCmd.ExecuteReader();
                 //Read first record
                 while (dbReader.Read())
@@ -142,9 +142,9 @@ namespace SleepEasyHotel.PresentationLayer
                     //when displayed the combo box will call toString by default on the Guest object.
                     //the toString only displays the FirstName and LastName of the Guest.
                     lblGuestID.Text= dbReader["GuestID"].ToString();
-                    txtFirstName.Text = dbReader["FirstName"].ToString();
-                    txtLastName.Text= dbReader["LastName"].ToString();
-                    name = txtFirstName.Text+" "+ lblLastName.Text;
+                    txtFirstName.Text = dbReader["LastName"].ToString();
+                    txtLastName.Text= dbReader["FirstName"].ToString();
+                    name = txtFirstName.Text+" "+ txtLastName.Text;
                     txtCheckInDate.Text = dbReader["CheckIn"].ToString();
                     checkIn = txtCheckInDate.Text;
                     txtEmail.Text = dbReader["email"].ToString();
