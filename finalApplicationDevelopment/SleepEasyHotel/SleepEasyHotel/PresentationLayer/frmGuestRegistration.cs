@@ -1,18 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.OleDb;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * Guest Registration Form
+ * @since 20220220
+ * Form to create, update, read and delete a guest
+ */
 namespace SleepEasyHotel.PresentationLayer
 {
     public partial class frmGuestRegistration : UserControl
     {
+        //Connect to database
         string sConnection = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=SleepEasyHotelDatabase.accdb";
         OleDbConnection dbConn;
 
@@ -21,11 +20,9 @@ namespace SleepEasyHotel.PresentationLayer
             InitializeComponent();
         }
 
+        //Method to populate the rooms available combobox
         public void PopulateAvailableRoomCombo()
         {
-            //clear the form everytime when this method is called then populate
-            //ClearForm();
-
             try
             {
                 dbConn = new OleDbConnection(sConnection);
@@ -37,7 +34,6 @@ namespace SleepEasyHotel.PresentationLayer
                 OleDbCommand dbCmd = new OleDbCommand();
                 //set command SQL string
                 dbCmd.CommandText = sql;
-
                 //set the command connection
                 dbCmd.Connection = dbConn;
                 //create OleDbDataReader dbReader
@@ -47,9 +43,6 @@ namespace SleepEasyHotel.PresentationLayer
                 //Read first record
                 while (dbReader.Read())
                 {
-                    //Create a Guest object populate the firstName LastName and GuestId attibutes
-                    //Guest guest = new Guest(dbReader["FirstName"].ToString(), dbReader["LastName"].ToString(), (int)dbReader["GuestId"]);
-
                     //load the Guest object per into the combobox
                     //when displayed the combo box will call toString by default on the Guest object.
                     //the toString only displays the FirstName and LastName of the Guest.
@@ -66,11 +59,13 @@ namespace SleepEasyHotel.PresentationLayer
             }
         }
 
+        //Load the Form
         private void frmGuestRegistration_Load(object sender, EventArgs e)
         {
             PopulateAvailableRoomCombo();
         }
 
+        //Register Button
         private void btnRegister_Click(object sender, EventArgs e)
         {
             if (ValidateForm())
@@ -82,37 +77,23 @@ namespace SleepEasyHotel.PresentationLayer
                     dbConn.Open();
                     //create query to select all rows from Guest table
                     string sql;
-
-
                     sql = "UPDATE Rooms SET RoomStatus='Occupied',CheckIn='" + dtpCheckInDate.Text + "' WHERE RoomID='" + cmbRoomAvailable.Text + "';";
                     OleDbCommand dbCmd = new OleDbCommand();
-
-
                     //set command SQL string
                     dbCmd.CommandText = sql;
-
                     //set the command connection
                     dbCmd.Connection = dbConn;
-
-
-
                     //create OleDbDataReader dbReader
                     OleDbDataReader dbReader;
-
                     //Read data into dbReader
                     dbReader = dbCmd.ExecuteReader();
-
                     //close database connection
                     dbConn.Close();
-
-
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.ToString());
                 }
-
-
                 try
                 {
                     dbConn = new OleDbConnection(sConnection);
@@ -120,13 +101,9 @@ namespace SleepEasyHotel.PresentationLayer
                     dbConn.Open();
                     //create query to select all rows from Guest table
                     string sql;
-
-
-
                     sql = "Insert into Guest(LastName, FirstName, Street, City, State, Zip, Phone, Email, RoomID) Values (@FirstName, @LastName, @Street, @City, @State, @Zip, @Phone, @Email, @RoomID);";
                     //create database command
                     OleDbCommand dbCmd = new OleDbCommand();
-
                     //set command SQL string
                     dbCmd.CommandText = sql;
                     //set the command connection
@@ -145,7 +122,6 @@ namespace SleepEasyHotel.PresentationLayer
 
                     //execute insert. Check to see how many rows were affected
                     int rowCount = dbCmd.ExecuteNonQuery();
-
                     //close database connection
                     dbConn.Close();
                     if (rowCount == 1)
@@ -154,13 +130,7 @@ namespace SleepEasyHotel.PresentationLayer
                         //Update the form
                         ClearForm();
                         cmbRoomAvailable.Items.Clear();
-
-                        // cmbBookedRoom.Items.Clear();
                         PopulateAvailableRoomCombo();
-
-
-                        // PopulateBookedRooms();
-
                     }
                     else
                     {
@@ -175,6 +145,7 @@ namespace SleepEasyHotel.PresentationLayer
 
         }
 
+        //Clear Form Method
         private void ClearForm()
         {
             txtEmail.Clear();
@@ -189,10 +160,10 @@ namespace SleepEasyHotel.PresentationLayer
             dtpCheckInDate.ResetText();
         }
 
+        //Validate Form Method
         private bool ValidateForm()
         {
             string errMsg = "";
-
 
             if (txtFirstName.Text == "")
             {
@@ -235,7 +206,6 @@ namespace SleepEasyHotel.PresentationLayer
                 errMsg = "Missing checkIn Date \n";
             }
 
-
             if (errMsg.Length > 0)
             {
                 MessageBox.Show(errMsg);
@@ -248,6 +218,7 @@ namespace SleepEasyHotel.PresentationLayer
 
         }
 
+        //Refresh Button
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             ClearForm();

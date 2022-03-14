@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.OleDb;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * Create Service Form
+ * @since 20220220
+ * Form to create a service
+ */
 namespace SleepEasyHotel.PresentationLayer
 {
     public partial class frmCreateService : UserControl
@@ -17,11 +15,12 @@ namespace SleepEasyHotel.PresentationLayer
         {
             InitializeComponent();
         }
+
+        //Connect to database
         string sConnection = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=SleepEasyHotelDatabase.accdb";
         OleDbConnection dbConn;
 
-       
-
+        //Validate Form Method
         private bool ValidateForm()
         {
             string errMsg = "";
@@ -39,8 +38,6 @@ namespace SleepEasyHotel.PresentationLayer
                 errMsg = "Please enter Type. \n";
             }
 
-           
-
             if (errMsg.Length > 0)
             {
                 MessageBox.Show(errMsg);
@@ -52,6 +49,7 @@ namespace SleepEasyHotel.PresentationLayer
             }
         }
 
+        //Create Button
         private void btnCreate_Click(object sender, EventArgs e)
         {
             if (ValidateForm())
@@ -63,24 +61,16 @@ namespace SleepEasyHotel.PresentationLayer
                     dbConn.Open();
                     //create query to select all rows from Guest table
                     string sql;
-
-
-
                     sql = "Insert into Services(Description,Price,Type) Values('" + txtDescription.Text + "','" + txtPrice.Text + "','" + txtType.Text + "');";
                     //create database command
                     OleDbCommand dbCmd = new OleDbCommand();
-
                     //set command SQL string
                     dbCmd.CommandText = sql;
                     //set the command connection
                     dbCmd.Connection = dbConn;
-
                     //bind parameters
-
-
                     //execute insert. Check to see how many rows were affected
                     int rowCount = dbCmd.ExecuteNonQuery();
-
                     //close database connection
                     dbConn.Close();
                     if (rowCount == 1)
@@ -90,7 +80,6 @@ namespace SleepEasyHotel.PresentationLayer
                         txtDescription.Clear();
                         txtPrice.Clear();
                         txtType.Clear();
-
                     }
                     else
                     {

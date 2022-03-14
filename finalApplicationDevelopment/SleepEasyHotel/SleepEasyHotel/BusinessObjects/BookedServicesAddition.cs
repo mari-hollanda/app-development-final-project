@@ -1,27 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
+/* 
+ * Booked Services Addition Class
+ * @since 20220220
+ * Created to set the cost of a booking per night.
+ */
 namespace SleepEasyHotel.BusinessObjects
 {
     class BookedServicesAddition
     {
-       private static string CheckIn, CheckOut;
-       private double costPerNight = 80.00;
+        //Creating variables
+        private static string CheckIn, CheckOut;
+        private double costPerNight = 80.00;
         private double total;
        
-       
-        public BookedServicesAddition() 
-        {
-            
-        }
-
+        //Calculate Total Method
         public double CalculateTotal(string checkin, string checkout)
         {
             CheckIn = checkin;
             CheckOut = checkout;
+
             if (checkin == "" || checkout == "")
                 {
                 return 0;
@@ -34,12 +32,6 @@ namespace SleepEasyHotel.BusinessObjects
 
                 return total = (difference.Days * costPerNight);
             }
-
-            
-        }
-
-       
-
-        
+        }     
     }
 }

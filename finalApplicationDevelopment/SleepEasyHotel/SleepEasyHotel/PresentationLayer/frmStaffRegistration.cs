@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.OleDb;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * Guest Registration Form
+ * @since 20220220
+ * Form to create a staff
+ */
 namespace SleepEasyHotel.PresentationLayer
 {
     public partial class frmStaffRegistration : UserControl
@@ -16,16 +14,17 @@ namespace SleepEasyHotel.PresentationLayer
         public frmStaffRegistration()
         {
             InitializeComponent();
-            
         }
+
+        //Connect to database
         string sConnection = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=SleepEasyHotelDatabase.accdb";
         OleDbConnection dbConn;
 
+        //Button to register the new staff
         private void btnRegister_Click(object sender, EventArgs e)
         {
             if (ValidateForm())
             {
-
                 try
                 {
                     dbConn = new OleDbConnection(sConnection);
@@ -33,13 +32,9 @@ namespace SleepEasyHotel.PresentationLayer
                     dbConn.Open();
                     //create query to select all rows from Guest table
                     string sql;
-
-
-
                     sql = "Insert into Staff(FirstName, LastName,PositionId, PhoneNumber, Email, Title) Values (@FirstName, @LastName, @PositionId, @PhoneNumber, @Email, @Title);";
                     //create database command
                     OleDbCommand dbCmd = new OleDbCommand();
-
                     //set command SQL string
                     dbCmd.CommandText = sql;
                     //set the command connection
@@ -53,17 +48,14 @@ namespace SleepEasyHotel.PresentationLayer
                     dbCmd.Parameters.AddWithValue("@Email", txtEmail.Text);
                     dbCmd.Parameters.AddWithValue("@Title", txtTitle.Text);
 
-
                     //execute insert. Check to see how many rows were affected
                     int rowCount = dbCmd.ExecuteNonQuery();
-
                     //close database connection
                     dbConn.Close();
                     if (rowCount == 1)
                     {
                         MessageBox.Show("Record inserted successfully");
                         ClearForm();
-
                     }
                     else
                     {
@@ -77,6 +69,7 @@ namespace SleepEasyHotel.PresentationLayer
             }
         }
 
+        //Clear Form Method
         private void ClearForm()
         {
             txtEmail.Clear();
@@ -87,10 +80,10 @@ namespace SleepEasyHotel.PresentationLayer
             cmbPID.SelectedIndex = -1;
         }
 
+        //Validate Form Method
         private bool ValidateForm()
         {
             string errMsg = "";
-
             
              if (txtFirstName.Text == "")
             {

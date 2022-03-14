@@ -57,7 +57,7 @@ namespace SleepEasyHotel.PresentationLayer
             this.grpBooking.Controls.Add(this.dtpCheckOutDate);
             this.grpBooking.Controls.Add(this.lblCheckIn);
             this.grpBooking.Controls.Add(this.lblCheckOut);
-            this.grpBooking.Location = new System.Drawing.Point(50, 198);
+            this.grpBooking.Location = new System.Drawing.Point(50, 179);
             this.grpBooking.Margin = new System.Windows.Forms.Padding(4);
             this.grpBooking.Name = "grpBooking";
             this.grpBooking.Padding = new System.Windows.Forms.Padding(4);
@@ -112,7 +112,7 @@ namespace SleepEasyHotel.PresentationLayer
             this.grpRooms.Controls.Add(this.lblRoomID);
             this.grpRooms.Controls.Add(this.txtStaff);
             this.grpRooms.Controls.Add(this.lblRoomType);
-            this.grpRooms.Location = new System.Drawing.Point(50, 40);
+            this.grpRooms.Location = new System.Drawing.Point(50, 21);
             this.grpRooms.Margin = new System.Windows.Forms.Padding(4);
             this.grpRooms.Name = "grpRooms";
             this.grpRooms.Padding = new System.Windows.Forms.Padding(4);
@@ -208,7 +208,7 @@ namespace SleepEasyHotel.PresentationLayer
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(166, 350);
+            this.btnUpdate.Location = new System.Drawing.Point(209, 331);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 66;
@@ -219,7 +219,7 @@ namespace SleepEasyHotel.PresentationLayer
             // lblRoom
             // 
             this.lblRoom.AutoSize = true;
-            this.lblRoom.Location = new System.Drawing.Point(206, 181);
+            this.lblRoom.Location = new System.Drawing.Point(206, 162);
             this.lblRoom.Name = "lblRoom";
             this.lblRoom.Size = new System.Drawing.Size(49, 13);
             this.lblRoom.TabIndex = 49;
@@ -227,7 +227,7 @@ namespace SleepEasyHotel.PresentationLayer
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(281, 350);
+            this.btnDelete.Location = new System.Drawing.Point(356, 331);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 39;
@@ -237,7 +237,7 @@ namespace SleepEasyHotel.PresentationLayer
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(31, 360);
+            this.btnRefresh.Location = new System.Drawing.Point(59, 331);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(77, 23);
             this.btnRefresh.TabIndex = 67;
@@ -256,7 +256,7 @@ namespace SleepEasyHotel.PresentationLayer
             this.Controls.Add(this.grpBooking);
             this.Controls.Add(this.grpRooms);
             this.Name = "frmUpdateRooms";
-            this.Size = new System.Drawing.Size(499, 432);
+            this.Size = new System.Drawing.Size(467, 377);
             this.Load += new System.EventHandler(this.frmUpdateRooms_Load);
             this.grpBooking.ResumeLayout(false);
             this.grpBooking.PerformLayout();

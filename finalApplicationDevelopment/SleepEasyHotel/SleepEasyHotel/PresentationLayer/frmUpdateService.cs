@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.OleDb;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * Service Update Form
+ * @since 20220220
+ * Form to update, read and delete a room
+ */
 namespace SleepEasyHotel.PresentationLayer
 {
     public partial class frmUpdateService : UserControl
@@ -17,11 +15,12 @@ namespace SleepEasyHotel.PresentationLayer
         {
             InitializeComponent();
         }
+
+        //Connect to database
         string sConnection = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=SleepEasyHotelDatabase.accdb";
         OleDbConnection dbConn;
 
-
-
+        //Validate Form Method
         private bool ValidateForm()
         {
             string errMsg = "";
@@ -39,8 +38,6 @@ namespace SleepEasyHotel.PresentationLayer
                 errMsg = "Please enter Type. \n";
             }
 
-
-
             if (errMsg.Length > 0)
             {
                 MessageBox.Show(errMsg);
@@ -52,11 +49,9 @@ namespace SleepEasyHotel.PresentationLayer
             }
         }
 
+        //Populate Services
         public void PopulateServices()
         {
-            //clear the form everytime when this method is called then populate
-          
-
             try
             {
                 dbConn = new OleDbConnection(sConnection);
@@ -68,7 +63,6 @@ namespace SleepEasyHotel.PresentationLayer
                 OleDbCommand dbCmd = new OleDbCommand();
                 //set command SQL string
                 dbCmd.CommandText = sql;
-
                 //set the command connection
                 dbCmd.Connection = dbConn;
                 //create OleDbDataReader dbReader
@@ -78,9 +72,6 @@ namespace SleepEasyHotel.PresentationLayer
                 //Read first record
                 while (dbReader.Read())
                 {
-                    //Create a Guest object populate the firstName LastName and GuestId attibutes
-                    //Guest guest = new Guest(dbReader["FirstName"].ToString(), dbReader["LastName"].ToString(), (int)dbReader["GuestId"]);
-
                     //load the Guest object per into the combobox
                     //when displayed the combo box will call toString by default on the Guest object.
                     //the toString only displays the FirstName and LastName of the Guest.
@@ -97,6 +88,7 @@ namespace SleepEasyHotel.PresentationLayer
             }
         }
 
+        //Update Button
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if (ValidateForm())
@@ -108,34 +100,20 @@ namespace SleepEasyHotel.PresentationLayer
                     dbConn.Open();
                     //create query to Update Staff table
                     string sql;
-
-
                     sql = "UPDATE Services SET Description='" + txtDescription.Text +
-                     "',Price='" + txtPrice.Text +
-                      "',Type='" + txtType.Text + "'WHERE Description = '" + cmbDescription.Text + "'; ";
-
-
+                          "',Price='" + txtPrice.Text +
+                          "',Type='" + txtType.Text + "'WHERE Description = '" + cmbDescription.Text + "'; ";
                     OleDbCommand dbCmd = new OleDbCommand();
-
-
                     //set command SQL string
                     dbCmd.CommandText = sql;
-
                     //set the command connection
                     dbCmd.Connection = dbConn;
-
-
-
                     //create OleDbDataReader dbReader
                     OleDbDataReader dbReader;
-
                     //Read data into dbReader
                     dbReader = dbCmd.ExecuteReader();
-
                     //close database connection
                     dbConn.Close();
-
-                    // ClearForm();
                     lblServiceID.Text = "Service ID";
                     txtDescription.Clear();
                     txtPrice.Clear();
@@ -143,7 +121,6 @@ namespace SleepEasyHotel.PresentationLayer
                     cmbDescription.Items.Clear();
                     PopulateServices();
                     MessageBox.Show("Record Updated");
-
                 }
                 catch (Exception ex)
                 {
@@ -152,6 +129,7 @@ namespace SleepEasyHotel.PresentationLayer
             }
         }
 
+        //Method to insert data on fields when a service description is chosen on combobox
         private void cmbDescription_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -161,12 +139,10 @@ namespace SleepEasyHotel.PresentationLayer
                 dbConn.Open();
                 //create query to select all rows from Staff table
                 string sql;
-
                 sql = "SELECT RoomServiceID,Description,Price,Type FROM Services Where Description='" + cmbDescription.Text + "';";
                 OleDbCommand dbCmd = new OleDbCommand();
                 //set command SQL string
                 dbCmd.CommandText = sql;
-
                 //set the command connection
                 dbCmd.Connection = dbConn;
                 //create OleDbDataReader dbReader
@@ -193,11 +169,13 @@ namespace SleepEasyHotel.PresentationLayer
             }
         }
 
+        //Load Form
         private void frmUpdateService_Load(object sender, EventArgs e)
         {
             PopulateServices();
         }
 
+        //Delete Button
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (lblServiceID.Text == "")
@@ -213,31 +191,18 @@ namespace SleepEasyHotel.PresentationLayer
                     dbConn.Open();
                     //create query to Update Staff table
                     string sql;
-
-
                     sql = "DELETE FROM Services WHERE RoomServiceID=" + lblServiceID.Text + ";";
-
                     OleDbCommand dbCmd = new OleDbCommand();
-
-
                     //set command SQL string
                     dbCmd.CommandText = sql;
-
                     //set the command connection
                     dbCmd.Connection = dbConn;
-
-
-
                     //create OleDbDataReader dbReader
                     OleDbDataReader dbReader;
-
                     //Read data into dbReader
                     dbReader = dbCmd.ExecuteReader();
-
                     //close database connection
                     dbConn.Close();
-
-                    // ClearForm();
                     lblServiceID.Text = "Service ID";
                     txtDescription.Clear();
                     txtPrice.Clear();
@@ -245,7 +210,6 @@ namespace SleepEasyHotel.PresentationLayer
                     cmbDescription.Items.Clear();
                     PopulateServices();
                     MessageBox.Show("Record Deleted");
-
                 }
                 catch (Exception ex)
                 {
@@ -255,6 +219,7 @@ namespace SleepEasyHotel.PresentationLayer
             }
         }
 
+        //Refresh Button
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             lblServiceID.Text = "Service ID";

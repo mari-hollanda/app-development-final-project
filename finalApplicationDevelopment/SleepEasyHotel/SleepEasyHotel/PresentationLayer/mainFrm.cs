@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using SleepEasyHotel.PresentationLayer;
-using SleepEasyHotel.BusinessObjects;
 
+/*
+ * Main Form
+ * @since 20220220
+ * Form that contains the main parts of the application
+ */
 namespace SleepEasyHotel.PresentationLayer
 {
     public partial class mainFrm : Form
@@ -25,16 +21,20 @@ namespace SleepEasyHotel.PresentationLayer
 
         string username;
         string PositionID;
+
+        //Set Information method
         public void setInfo(string uName, string pID)
         {
             username = uName;
             PositionID = pID;
         }
+
         public mainFrm()
         {
             InitializeComponent();
         }
 
+        //Remove from Tab
         void clearTab(TabPage TB)
         {
             if (TB.Name == "Guest Registration")
@@ -69,19 +69,15 @@ namespace SleepEasyHotel.PresentationLayer
             {
                 loginCreate = 0;
             }
-            
             tbcApplication.TabPages.Remove(TB);
         }
 
-      
-
-
+        //Load the Form
         private void mainFrm_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Welcome "+username);
+            MessageBox.Show("Welcome "+ username);
             if (PositionID == "1")
             {
-
                 clearTabToolStripMenuItem.Enabled = true;
                 registrationToolStripMenuItem.Enabled = true;
                 disconnectToolStripMenuItem.Enabled = true;
@@ -114,6 +110,7 @@ namespace SleepEasyHotel.PresentationLayer
             }
         }
 
+        //Open Guest Registration ToolStripMenuItem
         private void guestRegistrationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (GuestRegistration == 0)
@@ -133,6 +130,7 @@ namespace SleepEasyHotel.PresentationLayer
             }
         }
 
+        //Open Booked Rooms ToolStripMenuItem
         private void bookedRoomsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (BookedRooms == 0)
@@ -152,6 +150,7 @@ namespace SleepEasyHotel.PresentationLayer
             }
         }
 
+        //Clear Tab Method
         private void clearTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (!(tbcApplication.SelectedTab == null))
@@ -160,8 +159,7 @@ namespace SleepEasyHotel.PresentationLayer
             }
         }
 
-       
-
+        //Open Staff Registration ToolStripMenuItem
         private void staffRegistrationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (StaffRegistration == 0)
@@ -181,6 +179,7 @@ namespace SleepEasyHotel.PresentationLayer
             }
         }
 
+        //Open Update Staff ToolStripMenuItem
         private void updateStaffToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (StaffUpdate == 0)
@@ -200,8 +199,7 @@ namespace SleepEasyHotel.PresentationLayer
             }
         }
 
-        
-
+        //Open Rooms ToolStripMenuItem
         private void roomToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (Rooms == 0)
@@ -221,8 +219,7 @@ namespace SleepEasyHotel.PresentationLayer
             }
         }
 
-        
-
+        //Open Create Service ToolStripMenuItem
         private void createServiceToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (createServices == 0)
@@ -242,6 +239,7 @@ namespace SleepEasyHotel.PresentationLayer
             }
         }
 
+        //Open Update Service ToolStripMenuItem
         private void updateServiceToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (updateServices == 0)
@@ -261,6 +259,7 @@ namespace SleepEasyHotel.PresentationLayer
             }
         }
 
+        //Logout Button
         private void disconnectToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Login login = new Login();
@@ -268,6 +267,7 @@ namespace SleepEasyHotel.PresentationLayer
             login.Show();
         }
 
+        //Exit Button
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("Do you want to close the application?", "Closing event!", MessageBoxButtons.YesNo);

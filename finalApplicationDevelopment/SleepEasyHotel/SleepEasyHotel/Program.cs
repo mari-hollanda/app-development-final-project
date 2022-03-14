@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using SleepEasyHotel.PresentationLayer;
 
+/*
+ * Program Class
+ * @since 20220220
+ */
 namespace SleepEasyHotel
 {
     static class Program
