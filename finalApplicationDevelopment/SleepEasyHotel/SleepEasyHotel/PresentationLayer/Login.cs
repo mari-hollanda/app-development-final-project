@@ -17,6 +17,10 @@ namespace SleepEasyHotel
             InitializeComponent();
         }
 
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+        }
+
         //Connect to database
         string sConnection = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=SleepEasyHotelDatabase.accdb";
         OleDbConnection dbConn;
@@ -31,7 +35,7 @@ namespace SleepEasyHotel
                 dbConn.Open();
                 //create query to select all rows from Guest table
                 string sql;
-                 sql = "SELECT * from Login where Password Like '" + txtPassword.Text + "' AND Username Like '"+txtUsername.Text+"';";
+                sql = "SELECT * from Login where Password Like '" + txtPassword.Text + "' AND Username Like '" + txtUsername.Text + "';";
                 OleDbCommand dbCmd = new OleDbCommand();
                 //set command SQL string
                 dbCmd.CommandText = sql;
@@ -48,9 +52,10 @@ namespace SleepEasyHotel
                     mainFrm frm = new mainFrm();
                     frm.setInfo(dbReader["UserName"].ToString(), dbReader["PositionID"].ToString());
                     this.Hide();
-                    frm.Show();        
+                    frm.Show();
                 }
-                else {
+                else
+                {
                     MessageBox.Show("Invalid Credentials");
                 }
                 //Close open connections
